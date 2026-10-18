@@ -32,11 +32,11 @@ export function Header({ language, onLanguageChange }: { language: Language; onL
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link aria-label="Psychological Projective Coaching home" className="brand" onClick={() => setMenuOpen(false)} to="/">
+        <Link aria-label={language === 'BG' ? 'Психологически проективен коучинг — начало' : 'Psychological Projective Coaching home'} className="brand" onClick={() => setMenuOpen(false)} to="/">
           <img alt="" aria-hidden="true" className="brand-mark" src="/images/reflection-wheel.png" />
           <span className="brand-copy">
-            <span className="brand-name">Psychological<br />Projective Coaching</span>
-            <span className="brand-tagline">A SPACE FOR INSIGHT AND GROWTH</span>
+            <span className="brand-name">{language === 'BG' ? <>Психологически<br />проективен коучинг</> : <>Psychological<br />Projective Coaching</>}</span>
+            <span className="brand-tagline">{language === 'BG' ? 'ПРОСТРАНСТВО ЗА ПРОЗРЕНИЯ И РАЗВИТИЕ' : 'A SPACE FOR INSIGHT AND GROWTH'}</span>
           </span>
         </Link>
         <button
@@ -50,48 +50,49 @@ export function Header({ language, onLanguageChange }: { language: Language; onL
         </button>
         <div className={`header-controls${menuOpen ? ' menu-open' : ''}`}>
           <nav aria-label="Main navigation" className="main-nav">
-            {navigation.map(({ label, path }) => (
+            {navigation.map(({ label, path }, index) => (
               <NavLink
                 end={path === '/'}
                 key={path}
                 onClick={() => setMenuOpen(false)}
                 to={path}
               >
-                {label}
+                {language === 'BG' ? ['Начало', 'Как протича', 'Услуги', 'Методът', 'За мен', 'Въпроси'][index] : label}
               </NavLink>
             ))}
           </nav>
           <Link aria-current={location.pathname === '/book-a-session' ? 'page' : undefined} className={`button button-primary header-book${location.pathname === '/book-a-session' ? ' booking-active' : ''}`} onClick={() => setMenuOpen(false)} to="/book-a-session">
-            Book a session <span aria-hidden="true">↗</span>
+            {language === 'BG' ? 'Запазете сесия' : 'Book a session'} <span aria-hidden="true">↗</span>
           </Link>
           <LanguageSelector onChange={onLanguageChange} value={language} />
         </div>
       </div>
-      {language !== 'EN' && <span className="sr-only">The {language} language placeholder is selected.</span>}
+      {language !== 'EN' && <span className="sr-only">{language === 'BG' ? 'Избран е български език.' : 'The German language placeholder is selected.'}</span>}
       <span className="sr-only" key={location.pathname}>{navigation.find((item) => item.path === location.pathname)?.label ?? 'Page'}</span>
     </header>
   )
 }
 
-export function Footer() {
+export function Footer({ language = 'EN' }: { language?: Language }) {
+  const bg = language === 'BG'
   return (
     <footer className="site-footer">
       <div className="footer-main wrap">
         <div>
-          <Link className="footer-brand" to="/">Psychological<br />Projective Coaching</Link>
-          <p>Grounded in psychology.<br />Inspired by symbolism. Guided by conversation.</p>
+          <Link className="footer-brand" to="/">{bg ? <>Психологически<br />проективен коучинг</> : <>Psychological<br />Projective Coaching</>}</Link>
+          <p>{bg ? <>Психология в основата.<br />Символика като вдъхновение.<br />Разговорът като път към нови перспективи.</> : <>Grounded in psychology.<br />Inspired by symbolism. Guided by conversation.</>}</p>
         </div>
         <div className="footer-links">
-          <span className="eyebrow">Explore</span>
-          {navigation.slice(1).map(({ label, path }) => <Link key={path} to={path}>{label}</Link>)}
+          <span className="eyebrow">{bg ? 'Разгледайте' : 'Explore'}</span>
+          {navigation.slice(1).map(({ label, path }, index) => <Link key={path} to={path}>{bg ? ['Как протича', 'Услуги', 'Методът', 'За мен', 'Въпроси'][index] : label}</Link>)}
         </div>
         <div className="footer-note">
-          <span className="eyebrow">A space to pause</span>
-          <p>A different perspective.<br />A conversation worth making space for.</p>
-          <Link className="text-link" to="/book-a-session">Book a session <span aria-hidden="true">↗</span></Link>
+          <span className="eyebrow">{bg ? 'Пространство за пауза' : 'A space to pause'}</span>
+          <p>{bg ? <>Различна гледна точка.<br />Разговор, за който си струва да отделите време.</> : <>A different perspective.<br />A conversation worth making space for.</>}</p>
+          <Link className="text-link" to="/book-a-session">{bg ? 'Запазете сесия' : 'Book a session'} <span aria-hidden="true">↗</span></Link>
         </div>
       </div>
-      <div className="footer-bottom wrap"><span>© 2026 Psychological Projective Coaching</span><span>Online · One-to-one · Reflection, not prediction</span></div>
+      <div className="footer-bottom wrap"><span>© 2026 Psychological Projective Coaching</span><span>{bg ? 'Онлайн · Индивидуално · Размисъл, не предсказание' : 'Online · One-to-one · Reflection, not prediction'}</span></div>
     </footer>
   )
 }
@@ -153,10 +154,17 @@ export function BookingCTA() {
   )
 }
 
-export function FAQAccordion({ limit }: { limit?: number }) {
+export function FAQAccordion({ limit, language = 'EN' }: { limit?: number; language?: Language }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const idPrefix = useId()
-  const items = limit ? faqs.slice(0, limit) : faqs
+  const bgFaqs = [
+    { question: 'Какво представлява психологическият проективен коучинг?', answer: 'Това е коучинг разговор с психологическа основа, който използва символни образи като отправна точка за размисъл. Изследваме преживяванията ви заедно; вие решавате какво има смисъл и как да постъпите.' },
+    { question: 'Това гледане на таро ли е?', answer: 'Не в традиционния смисъл. Таро се използва като символно и проективно средство, а не като източник на обективни отговори. Картите ни дават тема, която да забележим, поставим под въпрос и изследваме заедно.' },
+    { question: 'Трябва ли да вярвам в таро?', answer: 'Не. Не е необходимо да вярвате в таро или да знаете нещо за картите. Те предлагат образи за размисъл. Началото са вашите реакции и асоциации, а не предварително зададено тълкуване.' },
+    { question: 'Как използваме таро в коучинг сесия?', answer: 'Започваме с вашата ситуация, след което използваме избрани образи като покана за размисъл. Разглеждаме какво забелязвате, какви въпроси възникват и как тези гледни точки се свързват с ежедневието.' },
+    { question: 'Можете ли да ми кажете какво ще се случи в бъдеще?', answer: 'Не. Сесиите не предсказват бъдещето и не ви казват какво да правите. Те дават пространство да обмислите ситуацията и възможните начини да реагирате.' },
+  ]
+  const items = (language === 'BG' ? bgFaqs : faqs).slice(0, limit || faqs.length)
 
   return (
     <div className="faq-list">
