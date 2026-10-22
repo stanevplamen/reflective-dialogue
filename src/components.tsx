@@ -7,7 +7,7 @@ export type Language = 'EN' | 'BG' | 'DE'
 export function LanguageSelector({ value, onChange }: { value: Language; onChange: (language: Language) => void }) {
   return (
     <div className="language-switch" aria-label="Choose language">
-      {(['EN', 'BG', 'DE'] as const).map((language, index) => (
+      {(['EN', 'BG'] as const).map((language, index) => (
         <span className="language-option" key={language}>
           {index > 0 && <span aria-hidden="true" className="language-slash">/</span>}
           <button
@@ -57,7 +57,7 @@ export function Header({ language, onLanguageChange }: { language: Language; onL
                 onClick={() => setMenuOpen(false)}
                 to={path}
               >
-                {language === 'BG' ? ['Начало', 'Как протича', 'Услуги', 'Методът', 'За мен', 'Въпроси'][index] : label}
+                {language === 'BG' ? ['Начало', 'Как протича', 'Услуги', 'Методът', 'За мен', 'Блог', 'Въпроси'][index] : label}
               </NavLink>
             ))}
           </nav>
@@ -84,7 +84,7 @@ export function Footer({ language = 'EN' }: { language?: Language }) {
         </div>
         <div className="footer-links">
           <span className="eyebrow">{bg ? 'Разгледайте' : 'Explore'}</span>
-          {navigation.slice(1).map(({ label, path }, index) => <Link key={path} to={path}>{bg ? ['Как протича', 'Услуги', 'Методът', 'За мен', 'Въпроси'][index] : label}</Link>)}
+          {navigation.slice(1).map(({ label, path }, index) => <Link key={path} to={path}>{bg ? ['Как протича', 'Услуги', 'Методът', 'За мен', 'Блог', 'Въпроси'][index] : label}</Link>)}
         </div>
         <div className="footer-note">
           <span className="eyebrow">{bg ? 'Пространство за пауза' : 'A space to pause'}</span>

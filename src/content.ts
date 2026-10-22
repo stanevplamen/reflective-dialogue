@@ -4,6 +4,7 @@ export const navigation = [
   { label: 'Services', path: '/services' },
   { label: 'The method', path: '/the-method' },
   { label: 'About me', path: '/about' },
+  { label: 'Blog', path: '/blog' },
   { label: 'FAQ', path: '/faq' },
 ]
 

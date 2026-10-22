@@ -65,6 +65,10 @@ export function FAQPage() {
   return <><PageHero className="page-hero-no-divider faq-page-compact faq-abstract-hero" eyebrow="QUESTIONS & ANSWERS" title="Curiosity is a good place to start." description="You are welcome to ask questions, be sceptical, and take your time deciding whether this approach feels right for you." /><section className="faq-section faq-page-compact wrap"><FAQAccordion /></section><BookingCTA /></>
 }
 
+export function BlogPage() {
+  return <><PageHero className="blog-page-hero" eyebrow="BLOG" title="Tarot, psychology and the stories we make." description="Essays exploring tarot through Jungian and psychological lenses, the language of symbols, and the questions that help us see our lives differently." /><section className="blog-section wrap"><div className="blog-empty"><SectionLabel>COMING SOON</SectionLabel><h2>Thoughtful writing is on its way.</h2><p>Articles and essays on tarot, Jungian ideas, symbolism, and reflective practice will appear here.</p></div></section></>
+}
+
 export function BookingPage() {
   return (
     <>
