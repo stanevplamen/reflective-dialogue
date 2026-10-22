@@ -278,12 +278,12 @@ img { max-width: 100%; display: block; }
 @media (max-width: 640px) { .about-layout { grid-template-columns: 1fr; gap: 0; } .about-photo { aspect-ratio: 4 / 3; } .about-layout .about-copy { padding-top: 36px; } }
 
 .about-page-hero {
-  background-image: linear-gradient(90deg, rgba(247, 243, 234, .96) 0%, rgba(247, 243, 234, .88) 48%, rgba(247, 243, 234, .42) 100%), url('/images/about-cards.png');
+  background-image: linear-gradient(90deg, rgba(247, 243, 234, .97) 0%, rgba(247, 243, 234, .9) 53%, rgba(247, 243, 234, .44) 100%), url('/images/method-abstract.png');
   background-position: center;
   background-size: cover;
 }
 @media (max-width: 640px) {
-  .about-page-hero { background-image: linear-gradient(90deg, rgba(247, 243, 234, .88), rgba(247, 243, 234, .7)), url('/images/about-cards.png'); background-position: 64% center; }
+  .about-page-hero { background-image: linear-gradient(90deg, rgba(247, 243, 234, .94), rgba(247, 243, 234, .79)), url('/images/method-abstract.png'); background-position: 65% center; }
 }
 
 .method-band-bg {

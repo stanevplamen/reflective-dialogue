@@ -132,7 +132,7 @@ export function ServiceCard() {
       <SectionLabel>WHAT I OFFER</SectionLabel>
       <h2>Individual online coaching session</h2>
       <p className="service-description">You bring a situation, decision, recurring pattern, or question about yourself. We clarify what is most relevant, use tarot images as prompts where they help, and connect what emerges back to your everyday life. Nothing about the session requires you to believe in tarot.</p>
-      <div className="service-facts"><strong>CHF 50</strong><span>45 minutes</span><span>Online · one-to-one</span><span>Single session, no package required</span></div>
+      <div className="service-facts"><strong>€50</strong><span>45 minutes</span><span>Online · one-to-one</span><span>Single session, no package required</span></div>
       <BookingButton />
       <p className="disclaimer">Coaching is not psychotherapy, psychological assessment or diagnosis, and not a substitute for appropriate professional care. Sessions do not predict the future or tell you what to do.</p>
     </article>
@@ -148,7 +148,7 @@ export function BookingCTA() {
     <section className="booking-cta">
       <div className="wrap booking-cta-inner">
         <div><SectionLabel>A CONVERSATION WORTH MAKING SPACE FOR</SectionLabel><h2>A space to pause and explore.</h2><p>You do not need a perfectly formulated question. We can find the focus together.</p></div>
-        <div className="booking-cta-action"><BookingButton /><span>45 minutes · CHF 50 · Online</span></div>
+        <div className="booking-cta-action"><BookingButton /><span>45 minutes · €50 · Online</span></div>
       </div>
     </section>
   )

@@ -4,7 +4,7 @@ import { BookingButton, BookingCTA, FAQAccordion, InternalLink, NumberedSteps, P
 import { steps, topics } from './content'
 
 function InfoStrip() {
-  return <div className="info-strip"><span><i aria-hidden="true">◉</i> Online, one-to-one sessions</span><b aria-hidden="true">·</b><span><i aria-hidden="true">◷</i> 45 minutes · CHF 50</span><b aria-hidden="true">·</b><span><i aria-hidden="true">○</i> Reflection, not prediction</span></div>
+  return <div className="info-strip"><span><i aria-hidden="true">◉</i> Online, one-to-one sessions</span><b aria-hidden="true">·</b><span><i aria-hidden="true">◷</i> 45 minutes · €50</span><b aria-hidden="true">·</b><span><i aria-hidden="true">○</i> Reflection, not prediction</span></div>
 }
 
 function SplitIntro({ label, title, text, link, linkText, background = false }: { label: string; title: string; text: string; link?: string; linkText?: string; background?: boolean }) {
@@ -26,7 +26,7 @@ export function HomePage() {
           <p className="hero-subtitle">Find clarity.<br />Open up new possibilities.</p>
           <p className="hero-description">If something in your life feels unclear, stuck, or difficult to make sense of, this is a dedicated space to step back and explore it. See your situation from a new perspective and discover new ways of responding.</p>
           <div className="hero-actions"><BookingButton /><Link className="text-link" to="/how-it-works">How it works <span aria-hidden="true">↗</span></Link></div>
-          <p className="hero-meta">Individual online session · 45 minutes · CHF 50</p>
+          <p className="hero-meta">Individual online session · 45 minutes · €50</p>
         </div>
       </section>
       <InfoStrip />
@@ -81,7 +81,7 @@ export function BookingPage() {
         <div className="booking-overview">
           <SectionLabel>INDIVIDUAL ONLINE SESSION</SectionLabel>
           <h2>A focused conversation, just for you.</h2>
-          <p className="booking-price">CHF 50</p>
+          <p className="booking-price">€50</p>
           <p className="booking-duration">45 minutes · Held online</p>
           <ul className="booking-benefits">
             <li>A focused conversation about your question</li>
@@ -122,7 +122,7 @@ function BookingRequestForm() {
       </div>
       <div className="form-field">
         <label htmlFor="booking-session">Session</label>
-        <input id="booking-session" name="session" readOnly value="CHF 50 · 45 minutes · Online" />
+        <input id="booking-session" name="session" readOnly value="€50 · 45 minutes · Online" />
       </div>
       <div className="form-pair">
         <div className="form-field">
