@@ -101,9 +101,9 @@ export function SectionLabel({ children }: { children: React.ReactNode }) {
   return <div className="section-label"><span aria-hidden="true" />{children}</div>
 }
 
-export function PageHero({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
+export function PageHero({ eyebrow, title, description, className = '' }: { eyebrow: string; title: string; description: string; className?: string }) {
   return (
-    <section className="page-hero">
+    <section className={`page-hero${className ? ` ${className}` : ''}`}>
       <div className="wrap page-hero-inner">
         <SectionLabel>{eyebrow}</SectionLabel>
         <h1>{title}</h1>
@@ -147,7 +147,7 @@ export function BookingCTA() {
   return (
     <section className="booking-cta">
       <div className="wrap booking-cta-inner">
-        <div><SectionLabel>A CONVERSATION WORTH MAKING SPACE FOR</SectionLabel><h2>A space to pause.<br />A different perspective.</h2><p>You do not need a perfectly formulated question. We can find the focus together.</p></div>
+        <div><SectionLabel>A CONVERSATION WORTH MAKING SPACE FOR</SectionLabel><h2>A space to pause and explore.</h2><p>You do not need a perfectly formulated question. We can find the focus together.</p></div>
         <div className="booking-cta-action"><BookingButton /><span>45 minutes · CHF 50 · Online</span></div>
       </div>
     </section>

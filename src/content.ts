@@ -3,7 +3,7 @@ export const navigation = [
   { label: 'How it works', path: '/how-it-works' },
   { label: 'Services', path: '/services' },
   { label: 'The method', path: '/the-method' },
-  { label: 'About', path: '/about' },
+  { label: 'About me', path: '/about' },
   { label: 'FAQ', path: '/faq' },
 ]
 
