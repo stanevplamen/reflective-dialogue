@@ -157,7 +157,7 @@ export function SetmoreBookingPanel({ language = 'EN' }: { language?: Language }
           <span>{isBulgarian ? 'Сканирайте за записване' : 'Scan to book'}</span>
         </a>
       </div>
-      <p className="booking-availability">Available Mondays and Saturdays, 09:00–16:00 CET/CEST (Europe/Zurich). Sessions last 45 minutes. If you are in another time zone, please note that these are Central European local times and adjust for daylight saving changes.</p>
+      <p className="booking-availability">{isBulgarian ? 'Понеделник и събота, от 10:00 до 17:00 ч. (EET - Sofia). Сесиите продължават 45 минути. Ако се намирате в друга часова зона, моля, имайте предвид, че посочените часове в букинг страницата са по централноевропейско време.' : 'Available Mondays and Saturdays, 09:00–16:00 CET/CEST (Europe/Zurich). Sessions last 45 minutes. If you are in another time zone, please note that these are Central European local times and adjust for daylight saving changes.'}</p>
     </div>
   )
 }
