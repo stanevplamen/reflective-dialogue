@@ -1,6 +1,5 @@
-import { useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
-import { BookingButton, BookingCTA, FAQAccordion, InternalLink, NumberedSteps, PageHero, SectionLabel, ServiceCard } from './components'
+import { BookingButton, BookingCTA, FAQAccordion, InternalLink, NumberedSteps, PageHero, SectionLabel, ServiceCard, SetmoreBookingPanel } from './components'
 import { steps, topics } from './content'
 
 function InfoStrip() {
@@ -39,7 +38,6 @@ export function HomePage() {
     </>
   )
 }
-
 export function HowItWorksPage() {
   return <><PageHero className="how-works-page-hero" eyebrow="HOW WE WORK TOGETHER" title="The cards are the starting point. The conversation is where the insight happens." description="We begin with your life—not the cards. You do not need to know anything about tarot or arrive with a perfectly formulated question." /><section className="content-section wrap"><NumberedSteps items={steps} /></section><SplitIntro label="YOUR SESSION, YOUR PACE" title="A focused space for what matters to you." text="Sessions are held online, one-to-one, and last 45 minutes. You can bring a specific question or simply a feeling that something deserves a closer look. We find the focus together." link="/services" linkText="Explore the session" /><BookingCTA /></>
 }
@@ -77,12 +75,12 @@ export function BookingPage() {
         title="Make space for your own perspective."
         description="Using conversation and symbolic exploration, we will work together to understand your situation, uncover different perspectives, and identify what feels meaningful and useful to you."
       />
-      <section aria-label="Session details and request form" className="booking-section wrap">
+      <section aria-label="Session details and booking" className="booking-section wrap">
         <div className="booking-overview">
           <SectionLabel>INDIVIDUAL ONLINE SESSION</SectionLabel>
           <h2>A focused conversation, just for you.</h2>
           <p className="booking-price">€50</p>
-          <p className="booking-duration">45 minutes · Held online</p>
+          <p className="booking-duration">Held online</p>
           <ul className="booking-benefits">
             <li>A focused conversation about your question</li>
             <li>Guided symbolic exploration</li>
@@ -90,71 +88,8 @@ export function BookingPage() {
             <li>Perspectives connected to everyday life</li>
           </ul>
         </div>
-        <BookingRequestForm />
+        <SetmoreBookingPanel />
       </section>
     </>
-  )
-}
-
-function BookingRequestForm() {
-  const [submitted, setSubmitted] = useState(false)
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    setSubmitted(true)
-  }
-
-  return (
-    <form aria-label="Demo session request" className="booking-form" onChange={() => setSubmitted(false)} onSubmit={handleSubmit}>
-      <p className="booking-notice">In a live booking flow, your request would be recorded for an email reply. Preferred dates are suggestions, not held slots, and no session is confirmed until we agree a time. This demo does not send or store your details.</p>
-      <div className="form-field">
-        <label htmlFor="booking-focus">What would you like to explore? <span aria-hidden="true">*</span></label>
-        <select autoComplete="off" id="booking-focus" name="focus" required defaultValue="">
-          <option disabled value="">Select a focus</option>
-          <option value="relationships">Relationships</option>
-          <option value="work-career">Work and career</option>
-          <option value="decision">A decision</option>
-          <option value="life-transition">A life transition</option>
-          <option value="personal-growth">Personal growth</option>
-          <option value="feeling-stuck">Feeling stuck</option>
-          <option value="other">Something else</option>
-        </select>
-      </div>
-      <div className="form-field">
-        <label htmlFor="booking-session">Session</label>
-        <input id="booking-session" name="session" readOnly value="€50 · 45 minutes · Online" />
-      </div>
-      <div className="form-pair">
-        <div className="form-field">
-          <label htmlFor="booking-date">Preferred date <span className="optional">(optional)</span></label>
-          <input id="booking-date" name="preferredDate" type="date" />
-        </div>
-        <div className="form-field">
-          <label htmlFor="booking-time">Preferred time <span className="optional">(optional)</span></label>
-          <input id="booking-time" name="preferredTime" type="time" />
-        </div>
-      </div>
-      <div className="form-field">
-        <label htmlFor="booking-timezone">Your time zone <span aria-hidden="true">*</span></label>
-        <input autoComplete="off" id="booking-timezone" name="timeZone" required defaultValue={Intl.DateTimeFormat().resolvedOptions().timeZone || 'Europe/Zurich'} />
-      </div>
-      <div className="form-pair">
-        <div className="form-field">
-          <label htmlFor="booking-name">Your name <span aria-hidden="true">*</span></label>
-          <input autoComplete="name" id="booking-name" name="name" required />
-        </div>
-        <div className="form-field">
-          <label htmlFor="booking-email">Email address <span aria-hidden="true">*</span></label>
-          <input autoComplete="email" id="booking-email" name="email" required type="email" />
-        </div>
-      </div>
-      <div className="form-field">
-        <label htmlFor="booking-note">Anything else you would like me to know? <span className="optional">(optional)</span></label>
-        <textarea id="booking-note" name="note" rows={4} />
-      </div>
-      <button className="button button-primary booking-submit" type="submit">Submit demo request <span aria-hidden="true">↗</span></button>
-      {submitted && <p aria-live="polite" className="form-confirmation" role="status">Demo confirmation: your details were validated in this browser, but no request or email has been sent.</p>}
-      <p className="form-demo-note">Demo form only. Your details are not sent or stored.</p>
-    </form>
   )
 }
