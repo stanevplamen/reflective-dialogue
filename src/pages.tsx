@@ -81,6 +81,11 @@ export function BookingPage() {
           <h2>A focused conversation, just for you.</h2>
           <p className="booking-price">€50</p>
           <p className="booking-duration">Held online</p>
+          <figure className="booking-payment">
+            <img alt="Revolut payment QR code" className="payment-qr" src="/images/revolut-qr.png" />
+            <figcaption>Payment via Revolut</figcaption>
+            <a className="text-link" href="https://revolut.me/ira29vkc?currency=EUR&amount=5000" rel="noopener noreferrer" target="_blank">Pay €50 via Revolut <span aria-hidden="true">↗</span></a>
+          </figure>
           <ul className="booking-benefits">
             <li>A focused conversation about your question</li>
             <li>Guided symbolic exploration</li>
