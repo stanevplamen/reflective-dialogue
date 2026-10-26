@@ -143,6 +143,25 @@ export function BookingButton({ children = 'Book a session' }: { children?: Reac
   return <Link className="button button-primary" to="/book-a-session">{children}<span aria-hidden="true">↗</span></Link>
 }
 
+export function SetmoreBookingPanel({ language = 'EN' }: { language?: Language }) {
+  const isBulgarian = language === 'BG'
+  return (
+    <div aria-label={isBulgarian ? 'Записване на сесия чрез Setmore' : 'Book a session through Setmore'} className="booking-panel" role="group">
+      <p className="booking-notice">{isBulgarian ? 'Изберете удобно време и завършете записването си чрез Setmore.' : 'Choose an available time and complete your booking through Setmore.'}</p>
+      <div className="booking-actions">
+        <a className="button button-primary booking-submit" href="https://projectivepractice.setmore.com/services/36d7d03d-6dc7-47fd-8cb0-b627526ac5df" rel="noopener noreferrer" target="_blank">
+          {isBulgarian ? 'Запазете своята сесия' : 'Book Your Session'} <span aria-hidden="true">↗</span>
+        </a>
+        <a aria-label={isBulgarian ? 'Сканирайте QR кода, за да запазите сесия в Setmore' : 'Scan the QR code to book your session with Setmore'} className="booking-qr-link" href="https://projectivepractice.setmore.com/services/36d7d03d-6dc7-47fd-8cb0-b627526ac5df" rel="noopener noreferrer" target="_blank">
+          <img alt="" className="booking-qr" src="/images/45mqr-code.png" />
+          <span>{isBulgarian ? 'Сканирайте за записване' : 'Scan to book'}</span>
+        </a>
+      </div>
+      <p className="booking-availability">{isBulgarian ? 'Понеделник и събота, от 10:00 до 17:00 ч. (EET - Sofia). Сесиите продължават 45 минути. Ако се намирате в друга часова зона, моля, имайте предвид, че посочените часове в букинг страницата са по централноевропейско време.' : 'Available Mondays and Saturdays, 09:00–16:00 CET/CEST (Europe/Zurich). Sessions last 45 minutes. If you are in another time zone, please note that these are Central European local times and adjust for daylight saving changes.'}</p>
+    </div>
+  )
+}
+
 export function BookingCTA() {
   return (
     <section className="booking-cta">
