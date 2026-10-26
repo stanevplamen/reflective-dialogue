@@ -66,7 +66,58 @@ export function FAQPage() {
 }
 
 export function BlogPage() {
-  return <><PageHero className="blog-page-hero" eyebrow="BLOG" title="Tarot, psychology and the stories we make." description="Essays exploring tarot through Jungian and psychological lenses, the language of symbols, and the questions that help us see our lives differently." /><section className="blog-section wrap"><div className="blog-empty"><SectionLabel>COMING SOON</SectionLabel><h2>Thoughtful writing is on its way.</h2><p>Articles and essays on tarot, Jungian ideas, symbolism, and reflective practice will appear here.</p></div></section></>
+  return <><PageHero className="blog-page-hero" eyebrow="BLOG" title="Tarot, psychology and the stories we make." description="Essays exploring tarot through Jungian and psychological lenses, the language of symbols, and the questions that help us see our lives differently." /><section className="blog-section wrap"><Link className="blog-card" to="/insights/tarot-without-fortune-telling"><img className="blog-card-art" src="/images/tarot-article-hero-canvas.png" alt="A face-down tarot deck beside a ceramic cup and dried flowers" /><div className="blog-card-copy"><SectionLabel>TAROT &amp; REFLECTION</SectionLabel><h2>Tarot Without Fortune-Telling: What Are We Actually Doing?</h2><p>Tarot doesn't have to predict the future to be worth exploring. Discover how symbolic images and thoughtful dialogue can help you approach familiar questions from a fresh perspective.</p><span className="text-link">Read the article <span aria-hidden="true">↗</span></span></div></Link></section></>
+}
+
+export function BlogArticlePage() {
+  return <><PageHero className="blog-page-hero article-hero" eyebrow="TAROT & REFLECTION" title="Tarot Without Fortune-Telling: What Are We Actually Doing?" description="An introduction to tarot as a tool for reflection, self-understanding, and meaningful conversation." /><article className="article-body wrap">
+    <p>When people hear the word <em>tarot</em>, they often imagine predictions, mysterious revelations, or someone claiming to know what the future holds. Others dismiss it entirely, associating it with superstition or irrational beliefs.</p>
+    <p>But there is another way to approach tarot.</p>
+    <p>What if we set aside the question of whether cards can predict the future and ask a different one instead?</p>
+    <blockquote className="article-question"><strong>What happens when we use symbolic images to explore our own experiences, questions, and ways of seeing the world?</strong></blockquote>
+    <p>This is the starting point of psychological tarot coaching. Rather than treating the cards as sources of hidden knowledge, we use them as prompts for reflection—a way to approach familiar questions from a different angle, articulate what may be difficult to put into words, and consider possibilities we might not have noticed before.</p>
+    <p>The cards do not need to tell us what is true. They can help us explore what might be meaningful.</p>
+
+    <h2>From prediction to exploration</h2>
+    <p>Imagine that you are facing a difficult decision. You have thought about it repeatedly, weighed the pros and cons, and discussed it with people you trust. Yet you still feel stuck.</p>
+    <p>You might be tempted to ask the tarot:</p><ul className="article-prediction-questions"><li>What should I do?</li><li>Which path is the right one?</li><li>What will happen if I choose this or that?</li></ul>
+    <p>These questions place the answer somewhere outside you, as though the cards could resolve the uncertainty on your behalf.</p>
+    <p>A reflective approach begins differently.</p>
+    <p>Instead of asking the cards to decide, we might explore questions such as:</p>
+    <ul><li>What makes this decision difficult for me?</li><li>What am I hoping to gain, and what am I afraid of losing?</li><li>Which needs or values seem to be in conflict?</li><li>Is there something I have been reluctant to acknowledge?</li><li>What possibilities have I not yet considered?</li></ul>
+    <p>The cards become part of an inquiry rather than an authority. They offer images, symbols, and situations that we can examine together. What matters is not whether an interpretation is supposedly correct, but whether exploring it helps you understand your situation more clearly.</p>
+    <p>This does not mean that every card will reveal something profound. Sometimes an image will feel irrelevant. Sometimes it will evoke an unexpected association. Sometimes the conversation will confirm something you already knew but had not quite articulated.</p><p>All of these are legitimate outcomes of reflection.</p>
+
+    <div className="article-feature"><div className="article-feature-copy"><h2>A different kind of question</h2>
+    <p>Consider the Two of Swords from the Rider–Waite–Smith tarot deck.</p>
+    <p>The card depicts a blindfolded figure sitting with two swords crossed over their chest. Behind the figure lies a body of water, with rocky landforms and a crescent moon in the distance.</p>
+    <p>The card is traditionally associated with indecision, stalemate, and difficult choices. These associations can provide a starting point, but they do not determine what the image must mean to a particular person.</p>
+    <p>Imagine looking at this card while struggling with a decision in your own life.</p>
+    <p>You might notice the crossed swords and think about two competing options. You might focus on the blindfold and wonder whether you are avoiding something. Or you might notice the figure's stillness and feel a sense of relief at the thought of not having to decide immediately.</p>
+    <p>Each observation opens a different line of inquiry.</p><p>Rather than telling you which interpretation is correct, we can begin with questions:</p>
+    <ul><li>What catches your attention first?</li><li>How do you respond to the figure's position?</li><li>Does the image remind you of anything in your current situation?</li><li>What, if anything, feels familiar about it?</li></ul>
+    <p>The point is not to extract a definitive answer from the card. It is to use the image as a starting point for a conversation about something that matters to you.</p>
+    <p>The image gives us something to look at together. Your experience gives the conversation its context.</p></div><figure className="article-image"><img src="/images/two-of-swords.jpg" alt="The Two of Swords tarot card, showing a blindfolded figure holding crossed swords beside the sea" /><figcaption>Two of Swords<br />Rider–Waite–Smith Tarot</figcaption></figure></div>
+
+    <h2>Why use images at all?</h2>
+    <p>We are accustomed to approaching problems through explanations, analysis, and rational argument. These are valuable ways of thinking, but they do not always help us move beyond a familiar line of thought.</p>
+    <p>When we are caught in a difficult situation, we can find ourselves repeating the same arguments without arriving at anything new. We may understand the practical aspects of a decision while remaining uncertain about our feelings, needs, or priorities.</p>
+    <p>An image offers another point of entry.</p>
+    <p>Instead of trying to explain a complicated situation immediately, we can begin by describing what we see, what we notice, and what the image brings to mind. This may make it easier to approach a question indirectly, without needing to have everything figured out in advance.</p>
+    <p>Of course, images are not inherently insightful, and they do not work for everyone. Their usefulness depends on the person, the context, and the conversation that follows.</p>
+    <p>But when an image gives us a fresh way to approach a familiar question, it can become a useful prompt for reflection.</p>
+
+    <h2>The cards provide a starting point, not an answer</h2>
+    <p>This is what distinguishes a reflective approach to tarot from fortune-telling.</p>
+    <p>We are not asking the cards to tell us what another person feels, what will happen next, or which decision we should make. We are using them to create space for questions that might otherwise remain unexplored.</p>
+    <p>A card does not have to reveal a hidden truth to be useful. Nor does every interpretation need to lead to a new discovery.</p>
+    <p>Sometimes reflection helps us recognise a conflict between two important needs. Sometimes it allows us to articulate a feeling we have struggled to describe. Sometimes it simply helps us look at a familiar situation from a slightly different perspective.</p>
+    <p>The aim is not to replace uncertainty with certainty. It is to approach uncertainty with greater curiosity and a clearer understanding of our own experience.</p>
+    <blockquote><strong>The cards provide the symbolic language. The conversation creates the space for reflection. What emerges is something to explore, not something you must accept as truth.</strong></blockquote>
+    <p>This is the starting point of my approach to psychological tarot coaching.</p>
+    <p>In the next article, we will explore one of the ideas that makes working with symbolic images particularly interesting: <em>projection</em>—and how our personal experiences, expectations, and concerns can influence what we see in an image.</p>
+    <Link className="article-back" to="/blog">← Back to the blog</Link>
+  </article></>
 }
 
 export function BookingPage() {
