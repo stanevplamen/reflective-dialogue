@@ -67,6 +67,14 @@ export default function BgToniWolffArticle() {
         <figcaption>Илюстрация на четирите форми. Тук исторически обусловеният модел на Волф е представен като отправна точка за размисъл, а не като универсално описание или предписание.</figcaption>
       </figure>
       <ArchetypeReflectionTest language="BG" />
+      <section className="further-reading">
+        <h2>Допълнителна литература</h2>
+        <ul>
+          <li>Wolff, T. (1995). “Structural Forms of the Feminine Psyche.” <em>Psychological Perspectives, 31</em>(1), 77–90.</li>
+          <li>Molton, M. D., &amp; Sikes, L. A. (2011). <em>Four Eternal Women: Toni Wolff Revisited—A Study in Opposites.</em> Fisher King Press.</li>
+          <li>Vermeesch, P. “<a href="https://www.cgjung.net/espace/jps/articles/peggy-vermeesch/toni-wolff-structural-forms-feminine-psyche/" rel="noreferrer">Toni Wolff’s Structural Forms of the Feminine Psyche</a>.” C. G. Jung Platform.</li>
+        </ul>
+      </section>
       <Link className="article-back" to="/blog">← Към блога</Link>
     </article>
   </>

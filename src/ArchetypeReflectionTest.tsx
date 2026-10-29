@@ -214,6 +214,12 @@ export default function ArchetypeReflectionTest({ language }: { language: Langua
     archetype,
     score: archetype.questions.reduce((total, _question, index) => total + (answers[`${archetype.id}-${index}`] ?? 0), 0),
   }))
+  const mixedQuestions = Array.from({ length: 6 }, (_, index) =>
+    groups.map((archetype) => ({
+      key: `${archetype.id}-${index}`,
+      question: archetype.questions[index],
+    })),
+  ).flat()
   const ranked = [...scores].sort((a, b) => b.score - a.score)
   const hasTies = new Set(scores.map(({ score }) => score)).size < scores.length
 
@@ -241,44 +247,31 @@ export default function ArchetypeReflectionTest({ language }: { language: Langua
       <p aria-live="polite" className="archetype-progress">{answeredCount} / 24 {text.progress}</p>
       <form onSubmit={submit}>
         <h3>{text.stepTwo}</h3>
-        {groups.map((archetype) => (
-          <section className="archetype-question-group" key={archetype.id} aria-labelledby={`${archetype.id}-title`}>
-            <h3 id={`${archetype.id}-title`}>{archetype.name} <span>· {archetype.queen} · {archetype.subtitle}</span></h3>
-            {archetype.questions.map((question, index) => {
-              const key = `${archetype.id}-${index}`
-              return (
-                <fieldset className="archetype-question" key={key}>
-                  <legend>{index + 1}. {question}</legend>
-                  <div className="archetype-options">
-                    {text.scale.map((description, valueIndex) => {
-                      const value = valueIndex + 1
-                      return (
-                        <label key={value}>
-                          <input
-                            aria-label={`${value}: ${description}`}
-                            checked={answers[key] === value}
-                            name={key}
-                            onChange={() => updateAnswer(key, value)}
-                            type="radio"
-                            value={value}
-                          />
-                          <span>{value}</span>
-                        </label>
-                      )
-                    })}
-                  </div>
-                </fieldset>
-              )
-            })}
-            {(() => {
-              const answered = Object.keys(answers).filter((key) => key.startsWith(`${archetype.id}-`)).length
-              const score = scores.find(({ archetype: item }) => item.id === archetype.id)?.score ?? 0
-              return <p className="archetype-subscore" aria-live="polite">
-                {answered} {language === 'EN' ? 'of 6 answered' : 'от 6 отговорени'} · {answered === 6 ? score : '—'} {text.of}
-              </p>
-            })()}
-          </section>
-        ))}
+        <section className="archetype-question-group" aria-label={language === 'EN' ? 'Mixed questionnaire' : 'Смесен въпросник'}>
+          {mixedQuestions.map(({ key, question }, index) => (
+            <fieldset className="archetype-question" key={key}>
+              <legend>{index + 1}. {question}</legend>
+              <div className="archetype-options">
+                {text.scale.map((description, valueIndex) => {
+                  const value = valueIndex + 1
+                  return (
+                    <label key={value}>
+                      <input
+                        aria-label={`${value}: ${description}`}
+                        checked={answers[key] === value}
+                        name={key}
+                        onChange={() => updateAnswer(key, value)}
+                        type="radio"
+                        value={value}
+                      />
+                      <span>{value}</span>
+                    </label>
+                  )
+                })}
+              </div>
+            </fieldset>
+          ))}
+        </section>
         <button className="button button-primary archetype-submit" disabled={!allAnswered} type="submit">{text.calculate}</button>
         {!allAnswered && <p className="archetype-incomplete">{text.incomplete}</p>}
       </form>

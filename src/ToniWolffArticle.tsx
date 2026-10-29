@@ -67,6 +67,14 @@ export default function ToniWolffArticle() {
         <figcaption>Illustration of the four forms. Wolff’s historically situated model is used here as a reflective lens, not as a universal account or prescription.</figcaption>
       </figure>
       <ArchetypeReflectionTest language="EN" />
+      <section className="further-reading">
+        <h2>Further reading</h2>
+        <ul>
+          <li>Wolff, T. (1995). “Structural Forms of the Feminine Psyche.” <em>Psychological Perspectives, 31</em>(1), 77–90.</li>
+          <li>Molton, M. D., &amp; Sikes, L. A. (2011). <em>Four Eternal Women: Toni Wolff Revisited—A Study in Opposites.</em> Fisher King Press.</li>
+          <li>Vermeesch, P. “<a href="https://www.cgjung.net/espace/jps/articles/peggy-vermeesch/toni-wolff-structural-forms-feminine-psyche/" rel="noreferrer">Toni Wolff’s Structural Forms of the Feminine Psyche</a>.” C. G. Jung Platform.</li>
+        </ul>
+      </section>
       <Link className="article-back" to="/blog">← Back to the blog</Link>
     </article>
   </>
