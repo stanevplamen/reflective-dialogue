@@ -74,6 +74,7 @@ export default function BgToniWolffArticle() {
           <li>Vermeesch, P. “<a href="https://www.cgjung.net/espace/jps/articles/peggy-vermeesch/toni-wolff-structural-forms-feminine-psyche/" rel="noreferrer">Toni Wolff’s Structural Forms of the Feminine Psyche</a>.” C. G. Jung Platform.</li>
         </ul>
       </section>
+      <p>В следваща статия ще разгледаме как четирите кралици в таро могат да служат като символни ориентири за развиване на различни психологически способности в ежедневието.</p>
       <Link className="article-back" to="/blog">← Към блога</Link>
     </article>
   </>

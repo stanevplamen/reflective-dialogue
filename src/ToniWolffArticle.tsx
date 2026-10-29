@@ -75,6 +75,7 @@ export default function ToniWolffArticle() {
           <li>Vermeesch, P. “<a href="https://www.cgjung.net/espace/jps/articles/peggy-vermeesch/toni-wolff-structural-forms-feminine-psyche/" rel="noreferrer">Toni Wolff’s Structural Forms of the Feminine Psyche</a>.” C. G. Jung Platform.</li>
         </ul>
       </section>
+      <p>In a follow-up article, we’ll explore how the four Tarot Queens can serve as symbolic guides for developing different psychological capacities in everyday life.</p>
       <Link className="article-back" to="/blog">← Back to the blog</Link>
     </article>
   </>
