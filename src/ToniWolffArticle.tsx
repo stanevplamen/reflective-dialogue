@@ -61,7 +61,7 @@ export default function ToniWolffArticle() {
           alt="Infographic showing the Mother, Amazon, Hetaira and Medial Woman, with a circular illustration divided into four symbolic scenes"
           height="768"
           loading="lazy"
-          src="/images/toni-wolff-four-feminine-archetypes.png"
+          src="/images/toni-wolff-four-feminine-archetypes-en.png"
           width="840"
         />
         <figcaption>Illustration of the four forms. Wolff’s historically situated model is used here as a reflective lens, not as a universal account or prescription.</figcaption>

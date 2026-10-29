@@ -57,7 +57,7 @@ export default function BgToniWolffArticle() {
           alt="Инфографика с Майката, Амазонката, Хетерата и Медиалната жена и кръгла илюстрация от четири символни сцени"
           height="768"
           loading="lazy"
-          src="/images/toni-wolff-four-feminine-archetypes-bg.svg"
+          src="/images/toni-wolff-four-feminine-archetypes-bg.png"
           width="840"
         />
         <figcaption>Илюстрация на четирите форми. Тук исторически обусловеният модел на Волф е представен като отправна точка за размисъл, а не като универсално описание или предписание.</figcaption>
