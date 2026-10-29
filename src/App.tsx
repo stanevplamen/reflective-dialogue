@@ -4,6 +4,8 @@ import { Footer, Header, type Language } from './components'
 import { AboutPage, BlogArticlePage, BlogPage, BookingPage, FAQPage, HomePage, HowItWorksPage, MethodPage, ServicesPage } from './pages'
 import { BgAboutPage, BgBlogPage, BgBookingPage, BgFAQPage, BgHomePage, BgHowItWorksPage, BgMethodPage, BgServicesPage } from './bgPages'
 import BgBlogArticle from './BgBlogArticle'
+import ToniWolffArticle from './ToniWolffArticle'
+import BgToniWolffArticle from './BgToniWolffArticle'
 
 const LANGUAGE_PREFERENCE_KEY = 'preferred-language'
 
@@ -49,15 +51,27 @@ export default function App() {
     if (language === null) return
     document.documentElement.lang = language === 'BG' ? 'bg' : language === 'DE' ? 'de' : 'en'
     const article = location.pathname === '/insights/tarot-without-fortune-telling'
-    document.title = article
-      ? language === 'BG' ? 'Таро без гадания: подход за размисъл' : 'Tarot Without Fortune-Telling: A Reflective Approach'
-      : language === 'BG' ? 'Психологически проективен коучинг' : 'Psychological Projective Coaching'
+      ? {
+          title: language === 'BG' ? 'Таро без гадания: подход за размисъл' : 'Tarot Without Fortune-Telling: A Reflective Approach',
+          description: language === 'BG'
+            ? 'Научете как таро може да подпомогне себепознанието и смисления разговор без предсказания, свръхестествени твърдения или фиксирани тълкувания.'
+            : 'Discover how tarot can be used for self-reflection and meaningful conversation without predictions, supernatural claims, or fixed interpretations.',
+        }
+      : location.pathname === '/insights/toni-wolff-four-queens'
+        ? {
+            title: language === 'BG' ? 'Тони Волф и четирите кралици в таро' : 'Toni Wolff and the Four Tarot Queens',
+            description: language === 'BG'
+              ? 'Изследвайте четирите форми на женската психика според Тони Волф и свободните им символни паралели с кралиците в таро.'
+              : 'Explore Toni Wolff’s four forms of the feminine psyche and their loose symbolic parallels with the Tarot Queens.',
+          }
+        : null
+    document.title = article?.title
+      ?? (language === 'BG' ? 'Психологически проективен коучинг' : 'Psychological Projective Coaching')
     const description = document.querySelector('meta[name="description"]')
-    if (description) description.setAttribute('content', article
-      ? language === 'BG'
-        ? 'Научете как таро може да подпомогне себепознанието и смисления разговор без предсказания, свръхестествени твърдения или фиксирани тълкувания.'
-        : 'Discover how tarot can be used for self-reflection and meaningful conversation without predictions, supernatural claims, or fixed interpretations.'
-      : 'Psychological projective coaching using reflective dialogue and symbolic images to explore your questions and perspectives.')
+    if (description) description.setAttribute('content', article?.description
+      ?? (language === 'BG'
+        ? 'Психологически проективен коучинг чрез рефлексивен диалог и символни образи за изследване на вашите въпроси и гледни точки.'
+        : 'Psychological projective coaching using reflective dialogue and symbolic images to explore your questions and perspectives.'))
   }, [language, location.pathname])
 
   function handleLanguageChange(nextLanguage: Language) {
@@ -86,6 +100,7 @@ export default function App() {
           <Route element={language === 'BG' ? <BgAboutPage /> : <AboutPage />} path="/about" />
           <Route element={language === 'BG' ? <BgBlogPage /> : <BlogPage />} path="/blog" />
           <Route element={language === 'BG' ? <BgBlogArticle /> : <BlogArticlePage />} path="/insights/tarot-without-fortune-telling" />
+          <Route element={language === 'BG' ? <BgToniWolffArticle /> : <ToniWolffArticle />} path="/insights/toni-wolff-four-queens" />
           <Route element={language === 'BG' ? <BgFAQPage /> : <FAQPage />} path="/faq" />
           <Route element={language === 'BG' ? <BgBookingPage /> : <BookingPage />} path="/book-a-session" />
           <Route element={language === 'BG' ? <BgHomePage /> : <HomePage />} path="*" />

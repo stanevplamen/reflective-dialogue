@@ -313,7 +313,7 @@ img { max-width: 100%; display: block; }
 }
 @media (max-width: 640px) { .blog-page-hero { background-image: linear-gradient(rgba(247, 243, 234, .94), rgba(247, 243, 234, .79)), url('/images/method-abstract.png'); background-position: 65% center; } }
 
-.blog-section { min-height: 300px; padding-block: clamp(64px, 8vw, 108px); }
+.blog-section { display: grid; gap: 28px; min-height: 300px; padding-block: clamp(64px, 8vw, 108px); }
 .blog-empty { max-width: 850px; margin-inline: auto; }
 .blog-empty h2 { margin: 24px 0 16px; font: 400 clamp(32px, 4vw, 48px)/1.15 var(--serif); }
 .blog-empty p { max-width: 680px; margin: 0; color: var(--muted); font-size: 18px; line-height: 1.8; }
@@ -337,6 +337,7 @@ img { max-width: 100%; display: block; }
 .article-body blockquote { margin: 2em 0; padding: 1.2em 1.4em; border-left: 3px solid #8b927e; color: var(--ink); background: #e8ebe2; }
 @media (max-width: 640px) { .blog-card { grid-template-columns: 1fr; } .blog-card-art { min-height: 190px; font-size: 112px; } .article-body { font-size: 17px; } }
 .article-hero { min-height: 300px; background-image: linear-gradient(90deg, rgba(250, 248, 244, .98) 0%, rgba(250, 248, 244, .92) 48%, rgba(250, 248, 244, .12) 100%), url('/images/tarot-article-hero-canvas.png'); background-position: center; background-size: cover; }
+.toni-wolff-hero { background-image: linear-gradient(90deg, rgba(250, 248, 244, .98) 0%, rgba(250, 248, 244, .92) 48%, rgba(250, 248, 244, .32) 100%), url('/images/tarot-four-queens-banner.png'); background-position: center, center 48%; }
 .article-hero .page-hero-inner { padding-block: 38px 34px; }
 .article-hero .section-label { display: none; }
 .article-hero h1 { max-width: 700px; margin: 0 0 14px; font-size: clamp(42px, 5vw, 62px); line-height: 1.08; }
@@ -352,6 +353,39 @@ img { max-width: 100%; display: block; }
 .article-image { margin: 28px 0 0; }
 .article-image img { display: block; width: 100%; height: auto; border: 1px solid #d7c9a9; border-radius: 10px; }
 .article-image figcaption { margin-top: 9px; color: var(--muted); text-align: center; font: 400 14px/1.4 var(--sans); }
+.archetype-test { margin: 52px 0; padding: clamp(20px, 4vw, 42px); border: 1px solid #d7c9a9; border-radius: 8px; background: #fbf9f4; font: 400 16px/1.55 var(--sans); }
+.archetype-test h2 { margin-top: 0; }
+.archetype-test .archetype-duration { margin-top: -1.2em; color: var(--muted); font-size: 14px; }
+.archetype-test h3 { margin: 1.4em 0 .6em; color: var(--ink); font: 400 24px/1.25 var(--serif); }
+.archetype-test h3 span, .archetype-result h4 span { color: var(--muted); font: 400 .72em/1.4 var(--sans); }
+.archetype-scale { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 12px 0; padding: 0; list-style: none; }
+.archetype-scale li { padding: 10px; background: #f1eee6; }
+.archetype-progress, .archetype-subscore { color: var(--muted); font-size: 14px; }
+.archetype-question-group { margin: 28px 0; padding: 20px; border-radius: 6px; background: #f1eee6; }
+.archetype-question-group h3 { margin: 0 0 16px; }
+.archetype-question { min-width: 0; margin: 0; padding: 12px 0; border: 0; border-top: 1px solid #d7d2c8; }
+.archetype-question legend { width: 100%; padding: 0 0 10px; font-size: 15px; }
+.archetype-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.archetype-options label { position: relative; }
+.archetype-options input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.archetype-options label span { display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid #9a9d8a; border-radius: 50%; background: #fbf9f4; cursor: pointer; }
+.archetype-options input:checked + span { border-color: #704537; color: white; background: #704537; }
+.archetype-options input:focus-visible + span { outline: 3px solid #b77c2e; outline-offset: 3px; }
+.archetype-subscore { margin: 8px 0 0; text-align: right; }
+.archetype-submit { border: 0; cursor: pointer; font: inherit; }
+.archetype-submit:disabled { cursor: not-allowed; opacity: .5; }
+.archetype-incomplete { color: var(--muted); font-size: 14px; }
+.archetype-results { margin-top: 38px; padding-top: 26px; border-top: 2px solid #b77c2e; }
+.archetype-results h3 { margin-top: 0; }
+.archetype-result { margin: 14px 0; padding: 18px; border-left: 4px solid #8b927e; background: #f1eee6; }
+.archetype-result-1 { border-left-color: #b77c2e; }
+.archetype-result-4 { border-left-color: #777d8e; }
+.archetype-result-role { color: var(--muted); font-size: 13px; font-weight: 600; text-transform: uppercase; }
+.archetype-result h4 { margin: 6px 0; color: var(--ink); font: 400 22px/1.25 var(--serif); }
+.archetype-result p { margin: 8px 0 0; }
+.archetype-result-score { font-size: 14px; font-weight: 600; }
+.archetype-results > ul { padding: 8px 22px 8px 40px; }
+.archetype-results > p:last-child { color: var(--muted); font-size: 14px; }
 .article-body ul { margin: .1em 0 .9em; padding: 12px 22px 12px 48px; border-radius: 4px; background: #f4f0e9; font-style: italic; }
 .article-body li { padding-left: .2em; margin-bottom: .12em; }
 .article-body li::marker { color: #b77c2e; }
@@ -359,6 +393,7 @@ img { max-width: 100%; display: block; }
 .article-body .article-back { font: 400 14px/1.5 var(--sans); }
 @media (max-width: 640px) {
   .article-hero { min-height: 0; background-image: linear-gradient(90deg, rgba(250, 248, 244, .94), rgba(250, 248, 244, .72)), url('/images/tarot-article-hero-canvas.png'); background-position: 62% center; }
+  .toni-wolff-hero { background-image: linear-gradient(90deg, rgba(250, 248, 244, .96), rgba(250, 248, 244, .78)), url('/images/tarot-four-queens-banner.png'); background-position: center, center center; }
   .article-hero .page-hero-inner { padding-block: 42px; }
   .article-hero h1 { font-size: clamp(38px, 10vw, 52px); }
   .article-body { padding: 22px 22px 70px; }

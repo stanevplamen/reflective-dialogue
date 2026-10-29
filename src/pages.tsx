@@ -64,7 +64,10 @@ export function FAQPage() {
 }
 
 export function BlogPage() {
-  return <><PageHero className="blog-page-hero" eyebrow="BLOG" title="Tarot, psychology and the stories we make." description="Essays exploring tarot through Jungian and psychological lenses, the language of symbols, and the questions that help us see our lives differently." /><section className="blog-section wrap"><Link className="blog-card" to="/insights/tarot-without-fortune-telling"><img className="blog-card-art" src="/images/tarot-article-hero-canvas.png" alt="A face-down tarot deck beside a ceramic cup and dried flowers" /><div className="blog-card-copy"><SectionLabel>TAROT &amp; REFLECTION</SectionLabel><h2>Tarot Without Fortune-Telling: What Are We Actually Doing?</h2><p>Tarot doesn't have to predict the future to be worth exploring. Discover how symbolic images and thoughtful dialogue can help you approach familiar questions from a fresh perspective.</p><span className="text-link">Read the article <span aria-hidden="true">↗</span></span></div></Link></section></>
+  return <><PageHero className="blog-page-hero" eyebrow="BLOG" title="Tarot, psychology and the stories we make." description="Essays exploring tarot through Jungian and psychological lenses, the language of symbols, and the questions that help us see our lives differently." /><section className="blog-section wrap">
+    <Link className="blog-card" to="/insights/toni-wolff-four-queens"><img className="blog-card-art" src="/images/toni-wolff.jpeg" alt="Portrait of Toni Wolff" /><div className="blog-card-copy"><SectionLabel>TAROT &amp; PSYCHOLOGY</SectionLabel><h2>Toni Wolff and the Four Queens</h2><p>Explore Wolff’s four forms of the feminine psyche and a set of loose symbolic parallels with the Tarot Queens—not as fixed types, but as perspectives for reflection.</p><span className="text-link">Read the article <span aria-hidden="true">↗</span></span></div></Link>
+    <Link className="blog-card" to="/insights/tarot-without-fortune-telling"><img className="blog-card-art" src="/images/tarot-article-hero-canvas.png" alt="A face-down tarot deck beside a ceramic cup and dried flowers" /><div className="blog-card-copy"><SectionLabel>TAROT &amp; REFLECTION</SectionLabel><h2>Tarot Without Fortune-Telling: What Are We Actually Doing?</h2><p>Tarot doesn't have to predict the future to be worth exploring. Discover how symbolic images and thoughtful dialogue can help you approach familiar questions from a fresh perspective.</p><span className="text-link">Read the article <span aria-hidden="true">↗</span></span></div></Link>
+  </section></>
 }
 
 export function BlogArticlePage() {
@@ -113,6 +116,7 @@ export function BlogArticlePage() {
     <p>The aim is not to replace uncertainty with certainty. It is to approach uncertainty with greater curiosity and a clearer understanding of our own experience.</p>
     <blockquote><strong>The cards provide the symbolic language. The conversation creates the space for reflection. What emerges is something to explore, not something you must accept as truth.</strong></blockquote>
     <p>This is the starting point of my approach to psychological tarot coaching.</p>
+    <p>For another way to explore tarot symbolism, read <Link to="/insights/toni-wolff-four-queens">Toni Wolff’s four forms of the feminine psyche and their loose parallels with the Tarot Queens</Link>.</p>
     <p>In the next article, we will explore one of the ideas that makes working with symbolic images particularly interesting: <em>projection</em>—and how our personal experiences, expectations, and concerns can influence what we see in an image.</p>
     <Link className="article-back" to="/blog">← Back to the blog</Link>
   </article></>
