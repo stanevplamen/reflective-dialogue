@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="768" viewBox="0 0 840 768">
+  <image href="/images/toni-wolff-four-feminine-archetypes.png" width="840" height="768"/>
+  <rect width="840" height="68" fill="#fffdf9"/>
+  <text x="420" y="27" text-anchor="middle" fill="#24232a" font-family="Georgia,serif" font-size="24">Четирите женски архетипа според Тони Волф</text>
+  <text x="420" y="46" text-anchor="middle" fill="#4a4850" font-family="Georgia,serif" font-size="12">Четири основни форми на женска енергия и преживяване.</text>
+  <text x="420" y="61" text-anchor="middle" fill="#4a4850" font-family="Georgia,serif" font-size="12">Всяка включва различни потребности, силни страни, предизвикателства и избори.</text>
+
+  <rect x="219" y="68" width="386" height="633" fill="#fffdf9"/>
+
+  <rect x="17" y="76" width="202" height="302" rx="8" fill="#faeee6"/>
+  <text x="25" y="101" fill="#7b1d16" font-family="Georgia,serif" font-size="24">Майката</text>
+  <text x="25" y="120" fill="#29252a" font-family="Georgia,serif" font-size="12">Грижа • Подкрепа • Устойчивост</text>
+  <text x="25" y="143" fill="#29252a" font-family="Georgia,serif" font-size="12">
+    <tspan x="25" dy="0">Създава условия за живот,</tspan>
+    <tspan x="25" dy="15">принадлежност и развитие.</tspan>
+    <tspan x="25" dy="15">Свързана е с грижата,</tspan>
+    <tspan x="25" dy="15">закрилата и подкрепата за</tspan>
+    <tspan x="25" dy="15">растежа на хора и идеи.</tspan>
+  </text>
+  <path d="M25 222h169" stroke="#d4b8aa"/>
+  <text x="25" y="240" fill="#29252a" font-family="Georgia,serif" font-size="13">Ключови думи</text>
+  <g fill="#9e432a" font-family="Georgia,serif" font-size="12">
+    <text x="26" y="259">• Грижа и подкрепа</text>
+    <text x="26" y="276">• Търпение</text>
+    <text x="26" y="293">• Емпатия</text>
+    <text x="26" y="310">• Свързаност</text>
+    <text x="26" y="327">• Принадлежност</text>
+    <text x="26" y="344">• Тяло и природа</text>
+    <text x="26" y="361">• Постоянство</text>
+  </g>
+
+  <rect x="605" y="76" width="218" height="302" rx="8" fill="#eef0e9"/>
+  <text x="614" y="101" fill="#20211e" font-family="Georgia,serif" font-size="24">Амазонката</text>
+  <text x="614" y="120" fill="#29252a" font-family="Georgia,serif" font-size="12">Независима • Смела • Целеустремена</text>
+  <text x="614" y="143" fill="#29252a" font-family="Georgia,serif" font-size="12">
+    <tspan x="614" dy="0">Отстоява автономността и</tspan>
+    <tspan x="614" dy="15">свободата да действа в света.</tspan>
+    <tspan x="614" dy="15">Свързана е с постиженията,</tspan>
+    <tspan x="614" dy="15">самостоятелността и личния</tspan>
+    <tspan x="614" dy="15">избор на посока.</tspan>
+  </text>
+  <path d="M614 222h190" stroke="#c5cabb"/>
+  <text x="614" y="240" fill="#29252a" font-family="Georgia,serif" font-size="13">Ключови думи</text>
+  <g fill="#43533d" font-family="Georgia,serif" font-size="12">
+    <text x="615" y="259">• Независимост</text>
+    <text x="615" y="276">• Сила и смелост</text>
+    <text x="615" y="293">• Самоутвърждаване</text>
+    <text x="615" y="310">• Амбиция</text>
+    <text x="615" y="327">• Граници</text>
+    <text x="615" y="344">• Действие и свобода</text>
+    <text x="615" y="361">• Лидерство</text>
+  </g>
+
+  <rect x="17" y="397" width="202" height="298" rx="8" fill="#faeae4"/>
+  <text x="25" y="424" fill="#7b1d16" font-family="Georgia,serif" font-size="24">Хетерата</text>
+  <text x="25" y="443" fill="#29252a" font-family="Georgia,serif" font-size="12">Отношения • Диалог • Вдъхновение</text>
+  <text x="25" y="466" fill="#29252a" font-family="Georgia,serif" font-size="12">
+    <tspan x="25" dy="0">Търси близост и смислена</tspan>
+    <tspan x="25" dy="15">среща с другия като отделна</tspan>
+    <tspan x="25" dy="15">личност. Свързана е с обмена,</tspan>
+    <tspan x="25" dy="15">взаимното вдъхновение и</tspan>
+    <tspan x="25" dy="15">богатството на личния опит.</tspan>
+  </text>
+  <path d="M25 545h169" stroke="#d4b8aa"/>
+  <text x="25" y="563" fill="#29252a" font-family="Georgia,serif" font-size="13">Ключови думи</text>
+  <g fill="#9e432a" font-family="Georgia,serif" font-size="12">
+    <text x="26" y="582">• Близост и любов</text>
+    <text x="26" y="599">• Емоционален обмен</text>
+    <text x="26" y="616">• Общуване</text>
+    <text x="26" y="633">• Чувственост</text>
+    <text x="26" y="650">• Творчество</text>
+    <text x="26" y="667">• Удоволствие и красота</text>
+    <text x="26" y="684">• Взаимност</text>
+  </g>
+
+  <rect x="605" y="397" width="218" height="298" rx="8" fill="#e9edf4"/>
+  <text x="614" y="424" fill="#16213a" font-family="Georgia,serif" font-size="22">Медиалната жена</text>
+  <text x="614" y="443" fill="#29252a" font-family="Georgia,serif" font-size="11">Съзерцателна • Интуитивна • Търсеща смисъл</text>
+  <text x="614" y="466" fill="#29252a" font-family="Georgia,serif" font-size="12">
+    <tspan x="614" dy="0">Свързана е с вътрешния свят,</tspan>
+    <tspan x="614" dy="15">интуицията и несъзнаваното.</tspan>
+    <tspan x="614" dy="15">Възприемчива е към символи</tspan>
+    <tspan x="614" dy="15">и търси смисъл отвъд</tspan>
+    <tspan x="614" dy="15">ежедневното и очевидното.</tspan>
+  </text>
+  <path d="M614 545h190" stroke="#bec6d4"/>
+  <text x="614" y="563" fill="#29252a" font-family="Georgia,serif" font-size="13">Ключови думи</text>
+  <g fill="#304e78" font-family="Georgia,serif" font-size="12">
+    <text x="615" y="582">• Интуиция</text>
+    <text x="615" y="599">• Вътрешна мъдрост</text>
+    <text x="615" y="616">• Размисъл и уединение</text>
+    <text x="615" y="633">• Въображение</text>
+    <text x="615" y="650">• Духовност и смисъл</text>
+    <text x="615" y="667">• Автентичност</text>
+    <text x="615" y="684">• Връзка с несъзнаваното</text>
+  </g>
+
+  <g>
+    <rect x="354" y="104" width="132" height="152" rx="8" fill="#f3eee6" stroke="#bcae9c"/>
+    <svg x="360" y="110" width="120" height="140" viewBox="195 105 145 159" preserveAspectRatio="xMidYMid slice">
+      <image href="/images/toni-wolff-four-feminine-archetypes.png" width="840" height="768"/>
+    </svg>
+    <text x="420" y="276" text-anchor="middle" fill="#7b1d16" font-family="Georgia,serif" font-size="15">Майката</text>
+
+    <rect x="224" y="281" width="132" height="152" rx="8" fill="#eef0e9" stroke="#bcae9c"/>
+    <svg x="230" y="287" width="120" height="140" viewBox="500 105 145 159" preserveAspectRatio="xMidYMid slice">
+      <image href="/images/toni-wolff-four-feminine-archetypes.png" width="840" height="768"/>
+    </svg>
+    <text x="290" y="453" text-anchor="middle" fill="#43533d" font-family="Georgia,serif" font-size="15">Амазонката</text>
+
+    <rect x="354" y="480" width="132" height="152" rx="8" fill="#faeae4" stroke="#bcae9c"/>
+    <svg x="360" y="486" width="120" height="140" viewBox="195 380 145 159" preserveAspectRatio="xMidYMid slice">
+      <image href="/images/toni-wolff-four-feminine-archetypes.png" width="840" height="768"/>
+    </svg>
+    <text x="420" y="652" text-anchor="middle" fill="#9e432a" font-family="Georgia,serif" font-size="15">Хетерата</text>
+
+    <rect x="484" y="281" width="112" height="152" rx="8" fill="#e9edf4" stroke="#bcae9c"/>
+    <svg x="490" y="287" width="100" height="140" viewBox="500 435 145 159" preserveAspectRatio="xMidYMid slice">
+      <image href="/images/toni-wolff-four-feminine-archetypes.png" width="840" height="768"/>
+    </svg>
+    <text x="540" y="453" text-anchor="middle" fill="#304e78" font-family="Georgia,serif" font-size="15">Медиалната жена</text>
+  </g>
+
+  <circle cx="420" cy="354" r="59" fill="#fffdf7" stroke="#bcae9c"/>
+  <text x="420" y="329" text-anchor="middle" fill="#27242b" font-family="Georgia,serif" font-size="13">
+    <tspan x="420" dy="0">Четирите форми</tspan>
+    <tspan x="420" dy="16">могат да се проявяват</tspan>
+    <tspan x="420" dy="16">по различен начин.</tspan>
+  </text>
+  <path d="M400 371h40" stroke="#bcae9c"/>
+  <text x="420" y="388" text-anchor="middle" fill="#504b4b" font-family="Georgia,serif" font-size="11">
+    <tspan x="420" dy="0">Движение и баланс</tspan>
+    <tspan x="420" dy="14">между тях.</tspan>
+  </text>
+
+  <rect x="11" y="701" width="818" height="61" rx="10" fill="#f3eff3"/>
+  <text x="28" y="727" fill="#32294a" font-family="Georgia,serif" font-size="18">Интеграция</text>
+  <text x="28" y="748" fill="#32294a" font-family="Georgia,serif" font-size="18">и цялост</text>
+  <text x="183" y="717" fill="#393541" font-family="Georgia,serif" font-size="11.5">
+    <tspan x="183" dy="0">Според Волф психологическото здраве включва разпознаване, приемане и интегриране на четирите форми,</tspan>
+    <tspan x="183" dy="14">вместо прекомерно отъждествяване само с една. Според житейския контекст някои може да са по-активни,</tspan>
+    <tspan x="183" dy="14">а други да остават на заден план. Интеграцията създава повече пространство за гъвкавост и развитие.</tspan>
+  </text>
+</svg>
