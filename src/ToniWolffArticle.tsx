@@ -27,7 +27,7 @@ export default function ToniWolffArticle() {
 
       <h2>The four forms as complementary possibilities</h2>
       <p>Wolff's model becomes most interesting when we stop asking which form a person is and instead ask which forms are active in a particular situation.</p>
-      <p>A person might embody the Mother when supporting a child, the Amazon when pursuing a professional goal, the Hetaira when engaging deeply with a partner, and the Medial Woman when exploring a dream or creating a work of art. But such case is very unlikely.</p>
+      <p>A person might embody the Mother when supporting a child, the Amazon when pursuing a professional goal, the Hetaira when engaging deeply with a partner, and the Medial Woman when exploring a dream or creating a work of art.</p>
       <p><strong>In general, some forms are more accessible and developed, while others remain less differentiated or relatively unconscious.</strong></p>
       <p>The forms can complement one another, but they can also come into conflict. The Amazon's ambition may compete with the Mother's wish to care for others; the Hetaira's desire for intimacy may conflict with the Amazon's need for independence. The Medial Woman may perceive possibilities that the other forms struggle to put into practice.</p>
       <p>This is where the model becomes useful as a tool for reflection: not as a test that tells us who we are, but as a set of perspectives that helps us explore the different needs, values and possibilities within us.</p>
