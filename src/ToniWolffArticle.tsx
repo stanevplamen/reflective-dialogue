@@ -23,6 +23,16 @@ export default function ToniWolffArticle() {
         <li><strong>The Amazon</strong> is oriented towards autonomy, achievement and engagement with the collective world.</li>
         <li><strong>The Medial Woman</strong> is oriented towards the unconscious and symbolic experience, and towards mediating between inner and outer worlds.</li>
       </ul>
+      <figure className="article-image">
+        <img
+          alt="Infographic showing the Mother, Amazon, Hetaira and Medial Woman, with a circular illustration divided into four symbolic scenes"
+          height="768"
+          loading="lazy"
+          src="/images/toni-wolff-four-feminine-archetypes-en.png"
+          width="840"
+        />
+        <figcaption>Illustration of the four forms. Wolff’s historically situated model is used here as a reflective lens, not as a universal account or prescription.</figcaption>
+      </figure>
       <p>Here, “orientation” is not a verdict about what someone is naturally suited for. It is a way to ask what is currently drawing a person’s attention, what feels meaningful, and what might be asking for more room.</p>
 
       <h2>The four forms as complementary possibilities</h2>
@@ -56,16 +66,6 @@ export default function ToniWolffArticle() {
       <blockquote><strong>These forms are invitations to explore, not instructions about who to become.</strong></blockquote>
       <p>In reflective tarot, the image does not provide an objective answer. It offers something to think with. The meaning develops through the person’s own associations and the conversation around them.</p>
       <p>For more on this approach, read <Link to="/insights/tarot-without-fortune-telling">how tarot can be used for reflection rather than fortune-telling</Link> or explore <Link to="/the-method">the Reflective Dialogue Method</Link>.</p>
-      <figure className="article-image">
-        <img
-          alt="Infographic showing the Mother, Amazon, Hetaira and Medial Woman, with a circular illustration divided into four symbolic scenes"
-          height="768"
-          loading="lazy"
-          src="/images/toni-wolff-four-feminine-archetypes-en.png"
-          width="840"
-        />
-        <figcaption>Illustration of the four forms. Wolff’s historically situated model is used here as a reflective lens, not as a universal account or prescription.</figcaption>
-      </figure>
       <ArchetypeReflectionTest language="EN" />
       <section className="further-reading">
         <h2>Further reading</h2>

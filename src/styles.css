@@ -338,6 +338,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 640px) { .blog-card { grid-template-columns: 1fr; } .blog-card-art { min-height: 190px; font-size: 112px; } .article-body { font-size: 17px; } }
 .article-hero { min-height: 300px; background-image: linear-gradient(90deg, rgba(250, 248, 244, .98) 0%, rgba(250, 248, 244, .92) 48%, rgba(250, 248, 244, .12) 100%), url('/images/tarot-article-hero-canvas.png'); background-position: center; background-size: cover; }
 .toni-wolff-hero { background-image: linear-gradient(90deg, rgba(250, 248, 244, .98) 0%, rgba(250, 248, 244, .92) 48%, rgba(250, 248, 244, .32) 100%), url('/images/tarot-four-queens-banner.png'); background-position: center, center 48%; }
+.eight-cups-hero { background-image: linear-gradient(90deg, rgba(250, 248, 244, .96) 0%, rgba(250, 248, 244, .88) 43%, rgba(250, 248, 244, .18) 100%), url('/images/eight-of-cups-moonlit-journey.jpg'); background-position: center, center 55%; }
 .article-hero .page-hero-inner { padding-block: 38px 34px; }
 .article-hero .section-label { display: none; }
 .article-hero h1 { max-width: 700px; margin: 0 0 14px; font-size: clamp(42px, 5vw, 62px); line-height: 1.08; }
@@ -353,8 +354,22 @@ img { max-width: 100%; display: block; }
 .article-image { margin: 28px 0 0; }
 .article-image img { display: block; width: 100%; height: auto; border: 1px solid #d7c9a9; border-radius: 10px; }
 .article-image figcaption { margin-top: 9px; color: var(--muted); text-align: center; font: 400 14px/1.4 var(--sans); }
+.eight-cups-card { max-width: 470px; margin: 30px auto; }
+.eight-cups-card img { max-height: 660px; object-fit: contain; }
+.thoth-card img { max-height: 580px; border: 0; border-radius: 0; }
+.eight-cups-journey { margin: 34px 0; }
+.eight-cups-journey img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.eight-cups-card-art { object-position: 70% center; }
 .archetype-test { margin: 52px 0; padding: clamp(20px, 4vw, 42px); border: 1px solid #d7c9a9; border-radius: 8px; background: #fbf9f4; font: 400 16px/1.55 var(--sans); }
 .archetype-test h2 { margin-top: 0; }
+.archetype-test-dropdown > summary { position: relative; padding-right: 60px; cursor: pointer; list-style: none; }
+.archetype-test-dropdown > summary::-webkit-details-marker { display: none; }
+.archetype-test-dropdown > summary::after { position: absolute; top: 8px; right: 0; display: grid; width: 42px; height: 42px; place-items: center; border-radius: 50%; background: #48553f; color: #fffdf9; content: '+'; font: 400 30px/1 var(--sans); }
+.archetype-test-dropdown[open] > summary::after { content: '−'; }
+.archetype-test-dropdown > summary h2 { margin-bottom: 12px; }
+.archetype-test-cta { display: inline-block; margin: 4px 0 16px; padding: 9px 16px; border-radius: 999px; background: #48553f; color: #fffdf9; font-size: 14px; font-weight: 600; }
+.archetype-test-dropdown > summary:hover .archetype-test-cta,
+.archetype-test-dropdown > summary:focus-visible .archetype-test-cta { background: #35402e; }
 .archetype-test .archetype-duration { margin-top: -1.2em; color: var(--muted); font-size: 14px; }
 .archetype-test h3 { margin: 1.4em 0 .6em; color: var(--ink); font: 400 24px/1.25 var(--serif); }
 .archetype-test h3 span, .archetype-result h4 span { color: var(--muted); font: 400 .72em/1.4 var(--sans); }

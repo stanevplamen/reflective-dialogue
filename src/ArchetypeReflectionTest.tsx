@@ -141,6 +141,7 @@ const archetypes: Record<Language, Archetype[]> = {
 const copy = {
   EN: {
     heading: 'The Four Feminine Archetypes: A Self-Reflection Test',
+    openTest: 'Start the self-reflection test',
     duration: 'Based on Toni Wolff’s four archetypes · Approximately 5–8 minutes',
     intro: 'Think about how you generally experience yourself in your current stage of life, rather than how you believe you should be.',
     stepOne: 'Step 1. Rate each statement',
@@ -172,6 +173,7 @@ const copy = {
   },
   BG: {
     heading: 'Четирите женски архетипа: тест за себепознание',
+    openTest: 'Започнете теста за себепознание',
     duration: 'По четирите архетипа на Тони Волф · Около 5–8 минути',
     intro: 'Помислете как обикновено преживявате себе си в настоящия етап от живота си, а не как смятате, че трябва да бъдете. Това е упражнение за размисъл, а не валидиран психологически тест или фиксиран етикет за личността.',
     stepOne: 'Стъпка 1. Оценете всяко твърдение',
@@ -235,8 +237,12 @@ export default function ArchetypeReflectionTest({ language }: { language: Langua
 
   return (
     <section className="archetype-test" aria-labelledby="archetype-test-title">
-      <h2 id="archetype-test-title">{text.heading}</h2>
-      <p className="archetype-duration">{text.duration}</p>
+      <details className="archetype-test-dropdown">
+        <summary>
+          <h2 id="archetype-test-title">{text.heading}</h2>
+          <p className="archetype-duration">{text.duration}</p>
+          <span className="archetype-test-cta">{text.openTest}</span>
+        </summary>
       <p>{text.intro}</p>
       <h3>{text.stepOne}</h3>
       <p>{text.scaleHeading}</p>
@@ -297,6 +303,7 @@ export default function ArchetypeReflectionTest({ language }: { language: Langua
           <p>{text.retry}</p>
         </section>
       )}
+      </details>
     </section>
   )
 }

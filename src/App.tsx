@@ -4,8 +4,10 @@ import { Footer, Header, type Language } from './components'
 import { AboutPage, BlogArticlePage, BlogPage, BookingPage, FAQPage, HomePage, HowItWorksPage, MethodPage, ServicesPage } from './pages'
 import { BgAboutPage, BgBlogPage, BgBookingPage, BgFAQPage, BgHomePage, BgHowItWorksPage, BgMethodPage, BgServicesPage } from './bgPages'
 import BgBlogArticle from './BgBlogArticle'
+import BgEightOfCupsArticle from './BgEightOfCupsArticle'
 import ToniWolffArticle from './ToniWolffArticle'
 import BgToniWolffArticle from './BgToniWolffArticle'
+import EightOfCupsArticle from './EightOfCupsArticle'
 
 const LANGUAGE_PREFERENCE_KEY = 'preferred-language'
 
@@ -64,14 +66,53 @@ export default function App() {
               ? 'Изследвайте четирите форми на женската психика според Тони Волф и свободните им символни паралели с кралиците в таро.'
               : 'Explore Toni Wolff’s four forms of the feminine psyche and their loose symbolic parallels with the Tarot Queens.',
           }
+        : location.pathname === '/insights/eight-of-cups-psychic-investment'
+          ? {
+              title: language === 'BG' ? 'Осмица чаши: значение и психология на Юнг' : 'Eight of Cups Meaning: Jungian Psychology & Libido',
+              description: language === 'BG'
+                ? 'Изследвайте Осмица чаши през идеята на Юнг за психичната енергия, образите на Райдър–Уейт–Смит и Таро на Тот и въпроси за личен размисъл.'
+                : 'Explore the Eight of Cups through Jung’s idea of psychic energy, with Rider–Waite–Smith and Thoth imagery, reflective questions, and a nuanced look at leaving.',
+            }
         : null
-    document.title = article?.title
+    const pageTitle = article?.title
       ?? (language === 'BG' ? 'Психологически проективен коучинг' : 'Psychological Projective Coaching')
+    document.title = pageTitle
     const description = document.querySelector('meta[name="description"]')
-    if (description) description.setAttribute('content', article?.description
+    const pageDescription = article?.description
       ?? (language === 'BG'
         ? 'Психологически проективен коучинг чрез рефлексивен диалог и символни образи за изследване на вашите въпроси и гледни точки.'
-        : 'Psychological projective coaching using reflective dialogue and symbolic images to explore your questions and perspectives.'))
+        : 'Psychological projective coaching using reflective dialogue and symbolic images to explore your questions and perspectives.')
+    if (description) description.setAttribute('content', pageDescription)
+
+    const setMeta = (selector: string, attribute: 'content' | 'href', value: string) => {
+      let element = document.head.querySelector<HTMLMetaElement | HTMLLinkElement>(selector)
+      if (!element) {
+        element = document.createElement(selector.startsWith('link') ? 'link' : 'meta')
+        if (selector.startsWith('link')) element.setAttribute('rel', 'canonical')
+        else if (selector.includes('property=')) element.setAttribute('property', selector.match(/property="([^"]+)"/)?.[1] ?? '')
+        else element.setAttribute('name', selector.match(/name="([^"]+)"/)?.[1] ?? '')
+        document.head.append(element)
+      }
+      element.setAttribute(attribute, value)
+    }
+    const isEightOfCupsArticle = location.pathname === '/insights/eight-of-cups-psychic-investment'
+    setMeta('meta[property="og:title"]', 'content', pageTitle)
+    setMeta('meta[property="og:description"]', 'content', pageDescription)
+    setMeta('meta[property="og:type"]', 'content', isEightOfCupsArticle ? 'article' : 'website')
+    setMeta('meta[property="og:locale"]', 'content', language === 'BG' ? 'bg_BG' : 'en_US')
+    setMeta('meta[name="twitter:title"]', 'content', pageTitle)
+    setMeta('meta[name="twitter:description"]', 'content', pageDescription)
+    setMeta('meta[name="twitter:card"]', 'content', isEightOfCupsArticle ? 'summary_large_image' : 'summary')
+    setMeta('link[rel="canonical"]', 'href', new URL(location.pathname, window.location.origin).href)
+    if (isEightOfCupsArticle) {
+      setMeta('meta[property="og:image"]', 'content', new URL('/images/eight-of-cups-moonlit-journey.jpg', window.location.origin).href)
+      setMeta('meta[property="og:image:alt"]', 'content', 'Original illustration of eight cups and a winding path beneath the moon')
+      setMeta('meta[name="twitter:image"]', 'content', new URL('/images/eight-of-cups-moonlit-journey.jpg', window.location.origin).href)
+    } else {
+      document.head.querySelector('meta[property="og:image"]')?.remove()
+      document.head.querySelector('meta[property="og:image:alt"]')?.remove()
+      document.head.querySelector('meta[name="twitter:image"]')?.remove()
+    }
   }, [language, location.pathname])
 
   function handleLanguageChange(nextLanguage: Language) {
@@ -101,6 +142,7 @@ export default function App() {
           <Route element={language === 'BG' ? <BgBlogPage /> : <BlogPage />} path="/blog" />
           <Route element={language === 'BG' ? <BgBlogArticle /> : <BlogArticlePage />} path="/insights/tarot-without-fortune-telling" />
           <Route element={language === 'BG' ? <BgToniWolffArticle /> : <ToniWolffArticle />} path="/insights/toni-wolff-four-queens" />
+          <Route element={language === 'BG' ? <BgEightOfCupsArticle /> : <EightOfCupsArticle />} path="/insights/eight-of-cups-psychic-investment" />
           <Route element={language === 'BG' ? <BgFAQPage /> : <FAQPage />} path="/faq" />
           <Route element={language === 'BG' ? <BgBookingPage /> : <BookingPage />} path="/book-a-session" />
           <Route element={language === 'BG' ? <BgHomePage /> : <HomePage />} path="*" />
