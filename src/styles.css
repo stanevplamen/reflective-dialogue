@@ -432,7 +432,7 @@ img { max-width: 100%; display: block; }
   .eight-cups-gallery-copy,
   .eight-cups-gallery-card,
   .eight-cups-gallery-feature.image-on-left .eight-cups-gallery-copy,
-  .eight-cups-gallery-feature.image-on-left .eight-cups-gallery-card { grid-column: 1; }
+  .eight-cups-gallery-feature.image-on-left .eight-cups-gallery-card { grid-column: 1; grid-row: auto; }
   .eight-cups-gallery-card { width: min(78%, 330px); margin: 0 auto; }
 }
 
