@@ -101,13 +101,13 @@ export function SectionLabel({ children }: { children: React.ReactNode }) {
   return <div className="section-label"><span aria-hidden="true" />{children}</div>
 }
 
-export function PageHero({ eyebrow, title, description, className = '' }: { eyebrow: string; title: string; description: string; className?: string }) {
+export function PageHero({ eyebrow, title, description, className = '' }: { eyebrow: string; title: string; description?: string; className?: string }) {
   return (
     <section className={`page-hero${className ? ` ${className}` : ''}`}>
       <div className="wrap page-hero-inner">
         <SectionLabel>{eyebrow}</SectionLabel>
         <h1>{title}</h1>
-        <p className="page-intro">{description}</p>
+        {description && <p className="page-intro">{description}</p>}
       </div>
     </section>
   )

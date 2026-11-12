@@ -8,6 +8,8 @@ import BgEightOfCupsArticle from './BgEightOfCupsArticle'
 import ToniWolffArticle from './ToniWolffArticle'
 import BgToniWolffArticle from './BgToniWolffArticle'
 import EightOfCupsArticle from './EightOfCupsArticle'
+import EightCupsBetweenArticle from './EightCupsBetweenArticle'
+import BgEightCupsBetweenArticle from './BgEightCupsBetweenArticle'
 
 const LANGUAGE_PREFERENCE_KEY = 'preferred-language'
 
@@ -73,6 +75,13 @@ export default function App() {
                 ? 'Изследвайте Осмица чаши през идеята на Юнг за психичната енергия, образите на Райдър–Уейт–Смит и Таро на Тот и въпроси за личен размисъл.'
                 : 'Explore the Eight of Cups through Jung’s idea of psychic energy, with Rider–Waite–Smith and Thoth imagery, reflective questions, and a nuanced look at leaving.',
             }
+        : location.pathname === '/insights/eight-of-cups-between-identities'
+          ? {
+              title: language === 'BG' ? 'Осмица чаши: между това, което бяхме, и това, в което се превръщаме' : 'The Eight of Cups: Between Who We Were and Who We Are Becoming',
+              description: language === 'BG'
+                ? 'Разгледайте как съвременните колоди таро представят несигурния преход между идентичността, която оставяме, и тази, която тепърва се оформя.'
+                : 'Explore how contemporary Tarot decks portray the uncertain passage between an identity we are leaving and one still taking shape.',
+            }
         : null
     const pageTitle = article?.title
       ?? (language === 'BG' ? 'Психологически проективен коучинг' : 'Psychological Projective Coaching')
@@ -95,7 +104,7 @@ export default function App() {
       }
       element.setAttribute(attribute, value)
     }
-    const isEightOfCupsArticle = location.pathname === '/insights/eight-of-cups-psychic-investment'
+    const isEightOfCupsArticle = location.pathname === '/insights/eight-of-cups-psychic-investment' || location.pathname === '/insights/eight-of-cups-between-identities'
     setMeta('meta[property="og:title"]', 'content', pageTitle)
     setMeta('meta[property="og:description"]', 'content', pageDescription)
     setMeta('meta[property="og:type"]', 'content', isEightOfCupsArticle ? 'article' : 'website')
@@ -143,6 +152,7 @@ export default function App() {
           <Route element={language === 'BG' ? <BgBlogArticle /> : <BlogArticlePage />} path="/insights/tarot-without-fortune-telling" />
           <Route element={language === 'BG' ? <BgToniWolffArticle /> : <ToniWolffArticle />} path="/insights/toni-wolff-four-queens" />
           <Route element={language === 'BG' ? <BgEightOfCupsArticle /> : <EightOfCupsArticle />} path="/insights/eight-of-cups-psychic-investment" />
+          <Route element={language === 'BG' ? <BgEightCupsBetweenArticle /> : <EightCupsBetweenArticle />} path="/insights/eight-of-cups-between-identities" />
           <Route element={language === 'BG' ? <BgFAQPage /> : <FAQPage />} path="/faq" />
           <Route element={language === 'BG' ? <BgBookingPage /> : <BookingPage />} path="/book-a-session" />
           <Route element={language === 'BG' ? <BgHomePage /> : <HomePage />} path="*" />
