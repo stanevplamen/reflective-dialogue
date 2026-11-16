@@ -137,11 +137,16 @@ export function BookingPage() {
         <div className="booking-overview">
           <SectionLabel>INDIVIDUAL ONLINE SESSION</SectionLabel>
           <h2>A focused conversation, just for you.</h2>
-          <p className="booking-price">€50</p>
-          <p className="booking-duration">Held online</p>
+          <h3 className="booking-options-heading">Session options</h3>
+          <div className="booking-session-options">
+            <div className="service-option"><strong>€65</strong><span>First session · 60 minutes</span></div>
+            <div className="service-option"><strong>€50</strong><span>Follow-up session · 45 minutes</span></div>
+          </div>
+          <p className="booking-duration">Both sessions are held online.</p>
           <figure className="booking-payment">
             <img alt="Revolut payment QR code" className="payment-qr" src="/images/revolut-qr.png" />
             <figcaption>Payment via Revolut</figcaption>
+            <a className="text-link" href="https://revolut.me/ira29vkc?currency=EUR&amount=6500" rel="noopener noreferrer" target="_blank">Pay €65 via Revolut <span aria-hidden="true">↗</span></a>
             <a className="text-link" href="https://revolut.me/ira29vkc?currency=EUR&amount=5000" rel="noopener noreferrer" target="_blank">Pay €50 via Revolut <span aria-hidden="true">↗</span></a>
           </figure>
           <ul className="booking-benefits">
