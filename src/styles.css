@@ -122,9 +122,9 @@ img { max-width: 100%; display: block; }
 .service-card { padding: 0; border: 0; background: transparent; }
 .service-card h2 { margin: 24px 0 20px; font: 400 clamp(32px, 4.5vw, 57px)/1.2 var(--serif); }
 .service-description { max-width: 850px; color: var(--muted); font-size: 17px; line-height: 1.8; }
-.service-facts { margin: 32px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; font-size: 15px; }
+.service-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 20px 32px; margin: 32px 0; font-size: 15px; }
 .service-facts strong { color: var(--clay); }
-.service-option { display: grid; gap: 4px; }
+.service-option { display: grid; grid-template-columns: 64px minmax(0, 1fr); align-items: baseline; gap: 12px; }
 .disclaimer { margin: 31px 0 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .service-section + .topics-section { margin-top: 0; }
 .principles-section .step-row { grid-template-columns: 80px 1fr; }
@@ -234,7 +234,7 @@ img { max-width: 100%; display: block; }
   .step-row h3 { font-size: 24px; }
   .step-row p { font-size: 14px; }
   .service-card { padding: 0; }
-  .service-facts { flex-direction: column; gap: 8px; }
+  .service-facts { grid-template-columns: 1fr; gap: 12px; }
   .booking-section { grid-template-columns: 1fr; gap: 42px; }
   .booking-overview h2 { margin-block: 22px 28px; }
   .booking-duration { margin-bottom: 30px; }
