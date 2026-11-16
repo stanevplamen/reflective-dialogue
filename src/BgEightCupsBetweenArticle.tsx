@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { PageHero } from './components'
+import { ArticleDate, PageHero } from './components'
 
 function CardFeature({ alt, children, compactImage = false, deck, imageOnLeft = false, src }: { alt: string; children?: ReactNode; compactImage?: boolean; deck: string; imageOnLeft?: boolean; src: string }) {
   const classes = ['eight-cups-gallery-feature', imageOnLeft && 'image-on-left', compactImage && 'compact-image'].filter(Boolean).join(' ')
@@ -21,6 +21,7 @@ export default function BgEightCupsBetweenArticle() {
       title="Осмица чаши: между това, което бяхме, и това, в което се превръщаме"
     />
     <article className="article-body wrap eight-cups-between-article">
+      <ArticleDate date="2026-11-12" language="BG" />
       <p>Както разгледахме в <Link className="article-previous-link" to="/insights/eight-of-cups-psychic-investment">предишната статия</Link>, Осмица чаши може да символизира прехода между стара и зараждаща се идентичност — междинно пространство, в което вече сме започнали да оставяме нещо зад себе си, но все още не можем ясно да определим какво ни очаква. Съвременните колоди таро предлагат разнообразни визуални прочити на това преживяване, всеки от които улавя различен емоционален или психологически аспект на пътя.</p>
 
       <h2>Различни начини да си тръгнем</h2>

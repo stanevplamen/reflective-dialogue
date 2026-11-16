@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
-import { PageHero } from './components'
+import { ArticleDate, PageHero } from './components'
 
 export default function BgBlogArticle() {
   return <>
     <PageHero className="blog-page-hero article-hero" eyebrow="ТАРО И РАЗМИСЪЛ" title="Таро без гадания: какво всъщност правим?" description="Въведение в таро като средство за размисъл, себепознание и смислен разговор." />
     <article className="article-body wrap">
+      <ArticleDate date="2026-10-11" language="BG" />
       <p>Когато чуят думата <em>таро</em>, много хора си представят предсказания, мистериозни разкрития или някой, който твърди, че знае какво ще се случи в бъдеще. Други напълно го отхвърлят, като го свързват със суеверия и ирационални вярвания.</p>
       <p>Има и друг начин да подходим към таро.</p>
       <p>Ами ако оставим настрана въпроса дали картите могат да предсказват бъдещето и зададем друг?</p>

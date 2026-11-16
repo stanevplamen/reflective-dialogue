@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { PageHero } from './components'
+import { ArticleDate, PageHero } from './components'
 
 function CardFeature({ alt, children, compactImage = false, deck, imageOnLeft = false, src }: { alt: string; children?: ReactNode; compactImage?: boolean; deck: string; imageOnLeft?: boolean; src: string }) {
   const classes = ['eight-cups-gallery-feature', imageOnLeft && 'image-on-left', compactImage && 'compact-image'].filter(Boolean).join(' ')
@@ -21,6 +21,7 @@ export default function EightCupsBetweenArticle() {
       title="The Eight of Cups: Between Who We Were and Who We Are Becoming"
     />
     <article className="article-body wrap eight-cups-between-article">
+      <ArticleDate date="2026-11-12" />
       <p>As we explored in <Link className="article-previous-link" to="/insights/eight-of-cups-psychic-investment">the previous article</Link>, the Eight of Cups can represent a transition between an old and an emerging identity: a liminal space in which we have begun to leave something behind but cannot yet clearly define what lies ahead. Contemporary Tarot decks offer fascinating visual interpretations of this experience, each capturing a different emotional or psychological dimension of the journey.</p>
 
       <h2>Different ways of leaving</h2>

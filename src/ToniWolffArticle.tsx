@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import ArchetypeReflectionTest from './ArchetypeReflectionTest'
-import { PageHero } from './components'
+import { ArticleDate, PageHero } from './components'
 
 export default function ToniWolffArticle() {
   return <>
@@ -11,6 +11,7 @@ export default function ToniWolffArticle() {
       description="A reflective look at Toni Wolff’s four forms of the feminine psyche—and one way to explore them through the Tarot Queens."
     />
     <article className="article-body wrap">
+      <ArticleDate date="2026-10-29" />
       <p>Toni Wolff (1888–1953) was a Swiss Jungian analyst and close collaborator of Carl Gustav Jung. In her essay <em>Structural Forms of the Feminine Psyche</em>, she explored four ways the feminine psyche might be oriented: the Mother, the Hetaira, the Amazon and the Medial Woman.</p>
       <p>These are more useful as questions than as labels. Rather than sorting people into four personality types, Wolff’s model invites us to notice different sources of meaning and fulfilment: caring for others, forming intimate relationships, pursuing independent goals, or engaging with symbolic and unconscious dimensions of life.</p>
       <p>Wolff developed the model within the gender assumptions of her time. It can still offer a lens for reflection today, provided we treat its forms as possibilities—not prescriptions for how women should be, or definitions of anyone’s identity.</p>

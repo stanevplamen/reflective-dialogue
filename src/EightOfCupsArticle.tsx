@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { PageHero } from './components'
+import { ArticleDate, PageHero } from './components'
 
 export default function EightOfCupsArticle() {
   return <>
@@ -10,6 +10,7 @@ export default function EightOfCupsArticle() {
       description="What changes when something that once mattered no longer draws our emotional energy? A Jungian lens offers one way to explore the Eight of Cups."
     />
     <article className="article-body wrap">
+      <ArticleDate date="2026-11-08" />
       <p>There are many ways to approach the Eight of Cups. One particularly interesting perspective emerges when we consider Carl Jung’s concept of <em>libido</em>: not simply sexual energy, but psychic energy invested in the people, relationships, ambitions and pursuits that give our lives meaning.</p>
       <p>From this perspective, the card can invite us to notice when something that once drew our emotional energy no longer does. The object of our investment may remain much the same; our relationship with it has shifted.</p>
       <p>This is a symbolic interpretation, not a diagnosis or a claim that a card can reveal what is happening in someone’s psyche. It is one question we can bring to the image.</p>

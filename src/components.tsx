@@ -4,6 +4,14 @@ import { faqs, navigation } from './content'
 
 export type Language = 'EN' | 'BG' | 'DE'
 
+export function ArticleDate({ date, language = 'EN' }: { date: string; language?: Language }) {
+  const locale = language === 'BG' ? 'bg-BG' : 'en-GB'
+  const publishedLabel = language === 'BG' ? 'Публикувана на' : 'Published'
+  const formattedDate = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`))
+
+  return <p className="article-date"><span>{publishedLabel}</span> <time dateTime={date}>{formattedDate}</time></p>
+}
+
 export function LanguageSelector({ value, onChange }: { value: Language; onChange: (language: Language) => void }) {
   return (
     <div className="language-switch" aria-label="Choose language">
@@ -132,7 +140,11 @@ export function ServiceCard() {
       <SectionLabel>WHAT I OFFER</SectionLabel>
       <h2>Individual online coaching session</h2>
       <p className="service-description">You bring a situation, decision, recurring pattern, or question about yourself. We clarify what is most relevant, use tarot images as prompts where they help, and connect what emerges back to your everyday life. Nothing about the session requires you to believe in tarot.</p>
-      <div className="service-facts"><strong>€50</strong><span>45 minutes</span><span>Online · one-to-one</span><span>Single session, no package required</span></div>
+      <div className="service-facts">
+        <div className="service-option"><strong>€65</strong><span>First session · 60 minutes</span></div>
+        <div className="service-option"><strong>€50</strong><span>Follow-up session · 45 minutes</span></div>
+        <span>Online · one-to-one</span><span>Single session, no package required</span>
+      </div>
       <BookingButton />
       <p className="disclaimer">Coaching is not psychotherapy, psychological assessment or diagnosis, and not a substitute for appropriate professional care. Sessions do not predict the future or tell you what to do.</p>
     </article>
