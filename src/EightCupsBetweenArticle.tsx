@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { ArticleDate, PageHero } from './components'
+import { ArticleDate, GlossaryTerm, PageHero } from './components'
 
 function CardFeature({ alt, children, compactImage = false, deck, imageOnLeft = false, src }: { alt: string; children?: ReactNode; compactImage?: boolean; deck: string; imageOnLeft?: boolean; src: string }) {
   const classes = ['eight-cups-gallery-feature', imageOnLeft && 'image-on-left', compactImage && 'compact-image'].filter(Boolean).join(' ')
@@ -78,7 +78,7 @@ export default function EightCupsBetweenArticle() {
         deck="Lubanko Tarot"
         src="/images/eight-cups-between-lubanko.png"
       >
-        <p>Lubanko’s Eight of Cups seems to explore a related idea. The figure is falling through space while the cups rearrange themselves around him. If we consider the cups as symbolic representations of our emotional investments—the people, activities, roles and ideas in which we invest our psychic energy—the image becomes particularly evocative.</p>
+        <p>Lubanko’s Eight of Cups seems to explore a related idea. The figure is falling through space while the cups rearrange themselves around him. If we consider the cups as symbolic representations of our emotional investments—the people, activities, roles and ideas in which we invest our <GlossaryTerm language="EN" term="libido">psychic energy</GlossaryTerm>—the image becomes particularly evocative.</p>
         <p>Perhaps the old arrangement of our emotional world is being disrupted. What once occupied the centre of our attention is moving aside, while other possibilities begin to emerge. The process may feel like falling because we have temporarily lost our familiar points of reference. Yet this rearrangement may be precisely what allows a new internal configuration to develop.</p>
       </CardFeature>
 
@@ -98,7 +98,7 @@ export default function EightCupsBetweenArticle() {
         deck="R. Black Tarot"
         src="/images/eight-cups-between-r-black.png"
       >
-        <p>In the R. Black Tarot, a figure leaves home and loved ones, perhaps in pursuit of a spiritual quest or an inner calling that has become impossible to ignore. This brings to mind the archetype of the hero, who must leave the familiar world to embark on a journey of discovery. If we approach the image as a dream, we might wonder whether the departing figure embodies the exploratory function of the psyche, while the loved ones left behind represent other needs, such as belonging, care and security. Perhaps different psychological functions take centre stage at different moments in our lives.</p>
+        <p>In the R. Black Tarot, a figure leaves home and loved ones, perhaps in pursuit of a spiritual quest or an inner calling that has become impossible to ignore. This brings to mind the <GlossaryTerm language="EN" term="archetype">archetype</GlossaryTerm> of the hero, who must leave the familiar world to embark on a journey of discovery. If we approach the image as a dream, we might wonder whether the departing figure embodies the exploratory function of the <GlossaryTerm language="EN" term="psyche">psyche</GlossaryTerm>, while the loved ones left behind represent other needs, such as belonging, care and security. Perhaps different psychological functions take centre stage at different moments in our lives.</p>
       </CardFeature>
 
       <h2>Wearing another skin: Mary-El Tarot and Rachel Pollack</h2>
@@ -115,7 +115,7 @@ export default function EightCupsBetweenArticle() {
         imageOnLeft
         src="/images/eight-cups-between-rachel-pollack.png"
       >
-        <p>Rachel Pollack explores a similar idea through the imagery of masks. In her guidebook, she suggests that masks do not necessarily hide the self; they can also reveal it, helping us develop a persona or psychological function that already exists within us. Sometimes we need to experiment with a new way of being before we can recognise it as our own.</p>
+        <p>Rachel Pollack explores a similar idea through the imagery of masks. In her guidebook, she suggests that masks do not necessarily hide the self; they can also reveal it, helping us develop a <GlossaryTerm language="EN" term="persona">persona</GlossaryTerm> or psychological function that already exists within us. Sometimes we need to experiment with a new way of being before we can recognise it as our own.</p>
         <p>In this case, I understand the mask as a transitional identity—something we put on not to hide who we are, but to discover who we might become. Sometimes we develop by trying something unfamiliar, giving it form, practising it and eventually making it our own.</p>
       </CardFeature>
 
@@ -126,7 +126,7 @@ export default function EightCupsBetweenArticle() {
         imageOnLeft
         src="/images/eight-cups-between-squid-cake-marseille.png"
       >
-        <p>Squid Cake’s playful Marseille interpretation offers another interesting perspective. The eight cups appear to form a gathering, almost as if they were arranged around a table. We might imagine them as people coming together to celebrate, work or exchange something. If we take this image a step further and approach it as a psychological image, the cups could represent different parts of the psyche coming together. Perhaps transformation is not always about leaving one part of ourselves behind, but also about allowing different needs, attitudes and psychological functions to meet, interact and form a new internal arrangement.</p>
+        <p>Squid Cake’s playful Marseille interpretation offers another interesting perspective. The eight cups appear to form a gathering, almost as if they were arranged around a table. We might imagine them as people coming together to celebrate, work or exchange something. If we take this image a step further and approach it as a psychological image, the cups could represent different parts of the <GlossaryTerm language="EN" term="psyche">psyche</GlossaryTerm> coming together. Perhaps transformation is not always about leaving one part of ourselves behind, but also about allowing different needs, attitudes and psychological functions to meet, interact and form a new internal arrangement.</p>
       </CardFeature>
 
       <h2>The Eight of Cups as a rite of passage</h2>
@@ -145,7 +145,7 @@ export default function EightCupsBetweenArticle() {
         src="/images/eight-cups-between-cosmic-seed.png"
       >
         <p>In the Cosmic Seed Tarot, a flight of stairs leads towards a cave whose interior opens onto the vastness of outer space. The cave becomes a threshold between the familiar world and an unknown inner or cosmic dimension. The stairs suggest a gradual passage towards this threshold, while the opening reveals that what initially appears to be an enclosed, dark space may contain an entirely different universe.</p>
-        <p>Notice, too, the peacock perched above the entrance. Traditionally associated with beauty, renewal and immortality, the peacock introduces an intriguing suggestion of transformation and regeneration. From a Jungian perspective, we might also associate the peacock with the ego and its attachment to appearance, recognition and the familiar sense of self. Its position above the entrance invites an additional interpretation: perhaps, to cross this threshold, we need to loosen the ego’s need to remain in control, to know and to define what lies ahead. The journey into the unknown may require us to let go, at least temporarily, of the very identity through which we have learned to understand ourselves.</p>
+        <p>Notice, too, the peacock perched above the entrance. Traditionally associated with beauty, renewal and immortality, the peacock introduces an intriguing suggestion of transformation and regeneration. From a Jungian perspective, we might also associate the peacock with the <GlossaryTerm language="EN" term="ego">ego</GlossaryTerm> and its attachment to appearance, recognition and the familiar sense of self. Its position above the entrance invites an additional interpretation: perhaps, to cross this threshold, we need to loosen the <GlossaryTerm language="EN" term="ego">ego</GlossaryTerm>’s need to remain in control, to know and to define what lies ahead. The journey into the unknown may require us to let go, at least temporarily, of the very identity through which we have learned to understand ourselves.</p>
       </CardFeature>
       <p>Together, these images suggest that walking away is not necessarily an ending. It may be the beginning of an initiatory process: leaving behind an identity, entering a period of uncertainty and making space for a different relationship with oneself and the world.</p>
 

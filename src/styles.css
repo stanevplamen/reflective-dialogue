@@ -332,6 +332,10 @@ img { max-width: 100%; display: block; }
 .article-body { max-width: 760px; padding-block: 40px 100px; color: #35372f; font-size: 18px; line-height: 1.85; }
 .article-body > .article-date { margin: 0 0 1.5em; color: var(--muted); font: 400 14px/1.5 var(--sans); }
 .article-body > p { margin: 0 0 1.25em; }
+.glossary-term-wrap { position: relative; display: inline; }
+.glossary-term { padding: 0; border: 0; border-bottom: 1px dotted currentColor; color: inherit; background: transparent; cursor: help; font: inherit; }
+.glossary-term:focus-visible { border-radius: 2px; outline: 2px solid var(--clay); outline-offset: 3px; }
+.glossary-popover { position: absolute; z-index: 20; top: calc(100% + 8px); left: 0; display: block; width: min(300px, calc(100vw - 40px)); padding: 12px 14px; border: 1px solid var(--line); border-radius: 4px; color: var(--ink); background: var(--paper-light); box-shadow: 0 8px 24px rgba(35, 33, 27, .16); font: 400 14px/1.55 var(--sans); }
 .article-body h2 { margin: 2.2em 0 .65em; color: var(--ink); font: 400 clamp(30px, 4vw, 40px)/1.2 var(--serif); }
 .article-body ul { margin: -.25em 0 1.4em; padding-left: 1.35em; }
 .article-body li { padding-left: .3em; margin-bottom: .4em; }
@@ -363,6 +367,7 @@ img { max-width: 100%; display: block; }
 .article-image { margin: 28px 0 0; }
 .article-image img { display: block; width: 100%; height: auto; border: 1px solid #d7c9a9; border-radius: 10px; }
 .article-image figcaption { margin-top: 9px; color: var(--muted); text-align: center; font: 400 14px/1.4 var(--sans); }
+.death-card-image { max-width: 470px; margin: 24px auto 36px; }
 .eight-cups-card { max-width: 470px; margin: 30px auto; }
 .eight-cups-card img { max-height: 660px; object-fit: contain; }
 .eight-cups-gallery-feature { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(220px, .75fr); gap: clamp(24px, 5vw, 56px); align-items: center; margin: 22px 0 34px; }

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import ArchetypeReflectionTest from './ArchetypeReflectionTest'
-import { ArticleDate, PageHero } from './components'
+import { ArticleDate, GlossaryTerm, PageHero } from './components'
 
 export default function ToniWolffArticle() {
   return <>
@@ -12,17 +12,17 @@ export default function ToniWolffArticle() {
     />
     <article className="article-body wrap">
       <ArticleDate date="2026-10-29" />
-      <p>Toni Wolff (1888–1953) was a Swiss Jungian analyst and close collaborator of Carl Gustav Jung. In her essay <em>Structural Forms of the Feminine Psyche</em>, she explored four ways the feminine psyche might be oriented: the Mother, the Hetaira, the Amazon and the Medial Woman.</p>
+      <p>Toni Wolff (1888–1953) was a Swiss Jungian analyst and close collaborator of Carl Gustav Jung. In her essay <em>Structural Forms of the Feminine Psyche</em>, she explored four ways the feminine psyche might be oriented: the <GlossaryTerm language="EN" term="wolffMother">Mother</GlossaryTerm>, the <GlossaryTerm language="EN" term="wolffHetaira">Hetaira</GlossaryTerm>, the <GlossaryTerm language="EN" term="wolffAmazon">Amazon</GlossaryTerm> and the <GlossaryTerm language="EN" term="wolffMedialWoman">Medial Woman</GlossaryTerm>.</p>
       <p>These are more useful as questions than as labels. Rather than sorting people into four personality types, Wolff’s model invites us to notice different sources of meaning and fulfilment: caring for others, forming intimate relationships, pursuing independent goals, or engaging with symbolic and unconscious dimensions of life.</p>
       <p>Wolff developed the model within the gender assumptions of her time. It can still offer a lens for reflection today, provided we treat its forms as possibilities—not prescriptions for how women should be, or definitions of anyone’s identity.</p>
 
       <h2>Four orientations, not four personality types</h2>
       <p>Each form describes a broad orientation: a way of investing attention and energy. None is a complete description of a person, and no one needs to fit neatly into just one.</p>
       <ul>
-        <li><strong>The Mother</strong> is oriented towards nurturing, protecting and fostering growth.</li>
-        <li><strong>The Hetaira</strong> is oriented towards intimate relationships and the development of individual identity through personal connection.</li>
-        <li><strong>The Amazon</strong> is oriented towards autonomy, achievement and engagement with the collective world.</li>
-        <li><strong>The Medial Woman</strong> is oriented towards the unconscious and symbolic experience, and towards mediating between inner and outer worlds.</li>
+        <li><strong>The <GlossaryTerm language="EN" term="wolffMother">Mother</GlossaryTerm></strong> is oriented towards nurturing, protecting and fostering growth.</li>
+        <li><strong>The <GlossaryTerm language="EN" term="wolffHetaira">Hetaira</GlossaryTerm></strong> is oriented towards intimate relationships and the development of individual identity through personal connection.</li>
+        <li><strong>The <GlossaryTerm language="EN" term="wolffAmazon">Amazon</GlossaryTerm></strong> is oriented towards autonomy, achievement and engagement with the collective world.</li>
+        <li><strong>The <GlossaryTerm language="EN" term="wolffMedialWoman">Medial Woman</GlossaryTerm></strong> is oriented towards the <GlossaryTerm language="EN" term="unconscious">unconscious</GlossaryTerm> and symbolic experience, and towards mediating between inner and outer worlds.</li>
       </ul>
       <figure className="article-image">
         <img
@@ -39,7 +39,7 @@ export default function ToniWolffArticle() {
       <h2>The four forms as complementary possibilities</h2>
       <p>Wolff's model becomes most interesting when we stop asking which form a person is and instead ask which forms are active in a particular situation.</p>
       <p>A person might embody the Mother when supporting a child, the Amazon when pursuing a professional goal, the Hetaira when engaging deeply with a partner, and the Medial Woman when exploring a dream or creating a work of art.</p>
-      <p><strong>In general, some forms are more accessible and developed, while others remain less differentiated or relatively unconscious.</strong></p>
+      <p><strong>In general, some forms are more accessible and developed, while others remain less differentiated or relatively <GlossaryTerm language="EN" term="unconscious">unconscious</GlossaryTerm>.</strong></p>
       <p>The forms can complement one another, but they can also come into conflict. The Amazon's ambition may compete with the Mother's wish to care for others; the Hetaira's desire for intimacy may conflict with the Amazon's need for independence. The Medial Woman may perceive possibilities that the other forms struggle to put into practice.</p>
       <p>This is where the model becomes useful as a tool for reflection: not as a test that tells us who we are, but as a set of perspectives that helps us explore the different needs, values and possibilities within us.</p>
 

@@ -10,6 +10,8 @@ import BgToniWolffArticle from './BgToniWolffArticle'
 import EightOfCupsArticle from './EightOfCupsArticle'
 import EightCupsBetweenArticle from './EightCupsBetweenArticle'
 import BgEightCupsBetweenArticle from './BgEightCupsBetweenArticle'
+import SkeletonMaidenArticle from './SkeletonMaidenArticle'
+import BgSkeletonMaidenArticle from './BgSkeletonMaidenArticle'
 
 const LANGUAGE_PREFERENCE_KEY = 'preferred-language'
 
@@ -53,6 +55,7 @@ export default function App() {
 
   useEffect(() => {
     if (language === null) return
+    const isSkeletonMaidenArticle = location.pathname === '/insights/skeleton-and-maiden-transformation'
     document.documentElement.lang = language === 'BG' ? 'bg' : language === 'DE' ? 'de' : 'en'
     const article = location.pathname === '/insights/tarot-without-fortune-telling'
       ? {
@@ -82,6 +85,13 @@ export default function App() {
                 ? 'Разгледайте как съвременните колоди таро представят несигурния преход между идентичността, която оставяме, и тази, която тепърва се оформя.'
                 : 'Explore how contemporary Tarot decks portray the uncertain passage between an identity we are leaving and one still taking shape.',
             }
+        : location.pathname === '/insights/skeleton-and-maiden-transformation'
+          ? {
+              title: language === 'BG' ? 'Картата Смърт в таро: път към трансформацията' : 'Death Tarot Card: Jungian Symbolism & Transformation',
+              description: language === 'BG'
+                ? 'Изследвайте картата Смърт от Tarot of the Sweet Twilight през юнгианската символика, скръбта, обновлението и движението от несъзнаваното към съзнанието.'
+                : 'Explore the Death card from the Tarot of the Sweet Twilight through Jungian symbolism, grief, renewal, and the movement from unconsciousness towards consciousness.',
+            }
         : null
     const pageTitle = article?.title
       ?? (language === 'BG' ? 'Психологически проективен коучинг' : 'Psychological Projective Coaching')
@@ -105,18 +115,24 @@ export default function App() {
       element.setAttribute(attribute, value)
     }
     const isEightOfCupsArticle = location.pathname === '/insights/eight-of-cups-psychic-investment' || location.pathname === '/insights/eight-of-cups-between-identities'
+    const isArticle = location.pathname.startsWith('/insights/')
     setMeta('meta[property="og:title"]', 'content', pageTitle)
     setMeta('meta[property="og:description"]', 'content', pageDescription)
-    setMeta('meta[property="og:type"]', 'content', isEightOfCupsArticle ? 'article' : 'website')
+    setMeta('meta[property="og:type"]', 'content', isArticle ? 'article' : 'website')
     setMeta('meta[property="og:locale"]', 'content', language === 'BG' ? 'bg_BG' : 'en_US')
     setMeta('meta[name="twitter:title"]', 'content', pageTitle)
     setMeta('meta[name="twitter:description"]', 'content', pageDescription)
-    setMeta('meta[name="twitter:card"]', 'content', isEightOfCupsArticle ? 'summary_large_image' : 'summary')
+    const articleImage = isEightOfCupsArticle
+      ? { src: '/images/eight-of-cups-moonlit-journey.jpg', alt: 'Original illustration of eight cups and a winding path beneath the moon' }
+      : isSkeletonMaidenArticle
+        ? { src: '/images/death-card-sweet-twilight.png', alt: 'A skeleton carries a woman in a red dress across a barren landscape beneath the Sun and Moon; a snake emerges from a skull.' }
+        : null
+    setMeta('meta[name="twitter:card"]', 'content', articleImage ? 'summary_large_image' : 'summary')
     setMeta('link[rel="canonical"]', 'href', new URL(location.pathname, window.location.origin).href)
-    if (isEightOfCupsArticle) {
-      setMeta('meta[property="og:image"]', 'content', new URL('/images/eight-of-cups-moonlit-journey.jpg', window.location.origin).href)
-      setMeta('meta[property="og:image:alt"]', 'content', 'Original illustration of eight cups and a winding path beneath the moon')
-      setMeta('meta[name="twitter:image"]', 'content', new URL('/images/eight-of-cups-moonlit-journey.jpg', window.location.origin).href)
+    if (articleImage) {
+      setMeta('meta[property="og:image"]', 'content', new URL(articleImage.src, window.location.origin).href)
+      setMeta('meta[property="og:image:alt"]', 'content', articleImage.alt)
+      setMeta('meta[name="twitter:image"]', 'content', new URL(articleImage.src, window.location.origin).href)
     } else {
       document.head.querySelector('meta[property="og:image"]')?.remove()
       document.head.querySelector('meta[property="og:image:alt"]')?.remove()
@@ -153,6 +169,7 @@ export default function App() {
           <Route element={language === 'BG' ? <BgToniWolffArticle /> : <ToniWolffArticle />} path="/insights/toni-wolff-four-queens" />
           <Route element={language === 'BG' ? <BgEightOfCupsArticle /> : <EightOfCupsArticle />} path="/insights/eight-of-cups-psychic-investment" />
           <Route element={language === 'BG' ? <BgEightCupsBetweenArticle /> : <EightCupsBetweenArticle />} path="/insights/eight-of-cups-between-identities" />
+          <Route element={language === 'BG' ? <BgSkeletonMaidenArticle /> : <SkeletonMaidenArticle />} path="/insights/skeleton-and-maiden-transformation" />
           <Route element={language === 'BG' ? <BgFAQPage /> : <FAQPage />} path="/faq" />
           <Route element={language === 'BG' ? <BgBookingPage /> : <BookingPage />} path="/book-a-session" />
           <Route element={language === 'BG' ? <BgHomePage /> : <HomePage />} path="*" />

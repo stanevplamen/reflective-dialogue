@@ -1,6 +1,7 @@
 import { useId, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { faqs, navigation } from './content'
+import { glossary, type GlossaryTermKey } from './glossary'
 
 export type Language = 'EN' | 'BG' | 'DE'
 
@@ -10,6 +11,32 @@ export function ArticleDate({ date, language = 'EN' }: { date: string; language?
   const formattedDate = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`))
 
   return <p className="article-date"><span>{publishedLabel}</span> <time dateTime={date}>{formattedDate}</time></p>
+}
+
+export function GlossaryTerm({ children, language, term }: { children: React.ReactNode; language: 'EN' | 'BG'; term: GlossaryTermKey }) {
+  const [isOpen, setIsOpen] = useState(false)
+  const tooltipId = useId()
+  const definition = glossary[term][language === 'BG' ? 'bg' : 'en']
+
+  return (
+    <span className="glossary-term-wrap">
+      <button
+        aria-controls={isOpen ? tooltipId : undefined}
+        aria-expanded={isOpen}
+        aria-label={`${children} — ${language === 'BG' ? 'пояснение' : 'definition'}`}
+        aria-describedby={isOpen ? tooltipId : undefined}
+        className="glossary-term"
+        onClick={() => setIsOpen((open) => !open)}
+        onKeyDown={(event) => {
+          if (event.key === 'Escape') setIsOpen(false)
+        }}
+        type="button"
+      >
+        {children}
+      </button>
+      {isOpen && <span className="glossary-popover" id={tooltipId} role="tooltip">{definition}</span>}
+    </span>
+  )
 }
 
 export function LanguageSelector({ value, onChange }: { value: Language; onChange: (language: Language) => void }) {

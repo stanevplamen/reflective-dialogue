@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArticleDate, PageHero } from './components'
+import { ArticleDate, GlossaryTerm, PageHero } from './components'
 
 export default function EightOfCupsArticle() {
   return <>
@@ -11,18 +11,18 @@ export default function EightOfCupsArticle() {
     />
     <article className="article-body wrap">
       <ArticleDate date="2026-11-08" />
-      <p>There are many ways to approach the Eight of Cups. One particularly interesting perspective emerges when we consider Carl Jung’s concept of <em>libido</em>: not simply sexual energy, but psychic energy invested in the people, relationships, ambitions and pursuits that give our lives meaning.</p>
+      <p>There are many ways to approach the Eight of Cups. One particularly interesting perspective emerges when we consider Carl Jung’s concept of <em><GlossaryTerm language="EN" term="libido">libido</GlossaryTerm></em>: not simply sexual energy, but <GlossaryTerm language="EN" term="libido">psychic energy</GlossaryTerm> invested in the people, relationships, ambitions and pursuits that give our lives meaning.</p>
       <p>From this perspective, the card can invite us to notice when something that once drew our emotional energy no longer does. The object of our investment may remain much the same; our relationship with it has shifted.</p>
-      <p>This is a symbolic interpretation, not a diagnosis or a claim that a card can reveal what is happening in someone’s psyche. It is one question we can bring to the image.</p>
+      <p>This is a symbolic interpretation, not a diagnosis or a claim that a card can reveal what is happening in someone’s <GlossaryTerm language="EN" term="psyche">psyche</GlossaryTerm>. It is one question we can bring to the image.</p>
       <h2>The number eight and the suit of Cups</h2>
       <p>In many tarot traditions, eight suggests structure, organisation, repetition and the development of an established pattern. Its meaning varies between decks and interpretive systems, so it is a starting point rather than a fixed rule.</p>
       <p>Cups are associated with Water and often invite reflection on feelings, relationships, imagination, intuition and our inner emotional life. Together, the number and suit can lead us to ask how emotional investments take shape over time—and what we notice when a familiar pattern stops feeling fulfilling.</p>
 
-      <h2>Libido: Freud’s and Jung’s different meanings</h2>
-      <h3>Freud: libido and the sexual drives</h3>
+      <h2><GlossaryTerm language="EN" term="libido">Libido</GlossaryTerm>: Freud’s and Jung’s different meanings</h2>
+      <h3>Freud: <GlossaryTerm language="EN" term="libido">libido</GlossaryTerm> and the sexual drives</h3>
       <p>Sigmund Freud used <em>libido</em> primarily for the energy of the sexual drives. His account of sexuality extended beyond sexual behaviour, and described how this energy might be expressed, repressed or redirected. In his model, the way the drives are handled is one important influence on psychological life.</p>
-      <h3>Jung: libido as psychic energy</h3>
-      <p>Jung came to use the term more broadly. In his theory, libido referred to psychic energy: a theoretical way of describing motivation and investment in psychological life. It could be directed towards relationships, work, creativity, intellectual interests, spiritual questions or personal development—not only sexuality.</p>
+      <h3>Jung: <GlossaryTerm language="EN" term="libido">libido</GlossaryTerm> as <GlossaryTerm language="EN" term="libido">psychic energy</GlossaryTerm></h3>
+      <p>Jung came to use the term more broadly. In his theory, <GlossaryTerm language="EN" term="libido">libido</GlossaryTerm> referred to <GlossaryTerm language="EN" term="libido">psychic energy</GlossaryTerm>: a theoretical way of describing motivation and investment in psychological life. It could be directed towards relationships, work, creativity, intellectual interests, spiritual questions or personal development—not only sexuality.</p>
       <p>Here, “energy” is a concept within Jung’s model, not a measurable substance. It gives us language for the attention, desire and effort we bring to something that feels meaningful. We think about it, imagine possibilities, make plans and give it our time.</p>
 
       <h2>The Rider–Waite–Smith Eight of Cups: when the cups remain</h2>
@@ -57,14 +57,14 @@ export default function EightOfCupsArticle() {
       <p>These are interpretive possibilities, not claims about what every Thoth reading or every person’s experience must mean. A card’s imagery, deck tradition and the reader’s own associations all matter.</p>
 
       <h2>When psychic energy withdraws, where might it go?</h2>
-      <p>In Jung’s account, psychic energy is not necessarily destroyed when a previous interest loses its pull. It may become available for another direction. But that change is not always immediate or comfortable, and the theory does not promise that a clear new purpose will automatically appear.</p>
+      <p>In Jung’s account, <GlossaryTerm language="EN" term="libido">psychic energy</GlossaryTerm> is not necessarily destroyed when a previous interest loses its pull. It may become available for another direction. But that change is not always immediate or comfortable, and the theory does not promise that a clear new purpose will automatically appear.</p>
       <p>In the in-between, someone might notice loss of interest, boredom, restlessness, nostalgia for what used to matter, or a longing for something they cannot yet name. The old investment has weakened; a new one has not yet become clear. We could call this being between investments.</p>
       <p>It is useful to distinguish two possibilities without assuming which one applies:</p>
       <ul>
         <li><strong>A developmental shift:</strong> an established way of living no longer fits, and questioning it may open room for a different orientation.</li>
         <li><strong>A period of depletion or difficulty:</strong> low motivation may be connected with burnout, depression, grief, chronic stress or other circumstances that deserve attention and support.</li>
       </ul>
-      <p>Not every loss of interest is individuation, and the Eight of Cups is not a mental-health assessment. Symbolic reflection should not replace professional support when someone is struggling or concerned about their wellbeing.</p>
+      <p>Not every loss of interest is <GlossaryTerm language="EN" term="individuation">individuation</GlossaryTerm>, and the Eight of Cups is not a mental-health assessment. Symbolic reflection should not replace professional support when someone is struggling or concerned about their wellbeing.</p>
 
       <h2>Questions for reflection</h2>
       <p>In the Reflective Dialogue Method, we might follow the movement of attention and feeling rather than jump straight to “What do you need to leave?”</p>
@@ -80,7 +80,7 @@ export default function EightOfCupsArticle() {
       <p>The last questions leave open the possibility that a change in attention can bring neglected interests into view. They do not assume that withdrawal is always beneficial or that a hidden answer is waiting to be uncovered.</p>
 
       <h2>One card, many possibilities</h2>
-      <p>Traditional readings of the Eight of Cups often include leaving a familiar situation, disappointment, withdrawal, introspection or a search for something more meaningful. These associations offer a natural starting point. The Jungian idea of libido adds another lens: perhaps we are seeing a shift in the way psychic energy is invested, as well as a decision to leave.</p>
+      <p>Traditional readings of the Eight of Cups often include leaving a familiar situation, disappointment, withdrawal, introspection or a search for something more meaningful. These associations offer a natural starting point. The Jungian idea of <GlossaryTerm language="EN" term="libido">libido</GlossaryTerm> adds another lens: perhaps we are seeing a shift in the way <GlossaryTerm language="EN" term="libido">psychic energy</GlossaryTerm> is invested, as well as a decision to leave.</p>
       <p>The Rider–Waite–Smith and Thoth cards make different visual and interpretive invitations. Neither image has to settle the question for us. Tarot symbolism is richer than any single psychological framework, and what matters in reflective work is the conversation between an image and a person’s own experience.</p>
       <blockquote><strong>The Eight of Cups can invite us to notice what has lost its pull—and to stay curious about what, if anything, is beginning to draw our attention elsewhere.</strong></blockquote>
       <p>For more on this approach, explore <Link to="/insights/tarot-without-fortune-telling">tarot as reflection rather than fortune-telling</Link> or read about <Link to="/the-method">the Reflective Dialogue Method</Link>.</p>
